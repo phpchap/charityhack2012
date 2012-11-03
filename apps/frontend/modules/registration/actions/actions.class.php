@@ -16,7 +16,25 @@ class registrationActions extends sfActions {
      * @param sfRequest $request A request object
      */
     public function executeIndex(sfWebRequest $request) {
-die('--1');
-    }
+        
+        // get the form
+        $this->form = new UserRegistrationForm();
+        
+    	// has the form been submitted?
+	if ($request->isMethod('post')) {
 
+            // bind submitted data
+            $form->bind($request->getParameter($form->getName()),
+                        $request->getFiles($form->getName()));
+
+            // validate the form
+            if ($form->isValid()) {
+
+                // get the cleansed values
+                $submittedInfo = $form->getValues();
+            }            
+            
+        }    
+    }
+    
 }

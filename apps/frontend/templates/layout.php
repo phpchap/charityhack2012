@@ -9,6 +9,7 @@
     <?php include_javascripts() ?>
   </head>
   <body>
+      <a href="<?php echo url_for('@registration');?>">register</a> 
     <?php echo $sf_content ?>
   </body>
 </html>

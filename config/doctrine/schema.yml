@@ -1,0 +1,22 @@
+UserDetails:
+  options:
+    type: InnoDB
+    collate: utf8_unicode_ci
+    charset: utf8    
+  tableName: user_detail
+  columns:
+    github_username: { type: string(255), notnull: true } 
+  relations:
+    User: { class: sfGuardUser, local: id, foreignAlias: sfGuardUser, type: one }
+    
+    
+GitHubAccount:
+  options:
+    type: InnoDB
+    collate: utf8_unicode_ci
+    charset: utf8    
+  tableName: user_repo
+  columns:
+    github_repo: { type: string(255), notnull: true } 
+  relations:
+    GitRepo: { class: sfGuardUser, local: id, foreignAlias: sfGuardUser, type: many }    
