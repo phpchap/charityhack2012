@@ -12,4 +12,51 @@
  */
 class UserDetails extends BaseUserDetails
 {
+    private $sfGuardUser = ""; // sfGuard user object    
+    /**
+     * add the sfUserGuard user to this class
+     * @param sfGuardUser $sfGuardUser
+     */
+    public function setSfGuardUser(sfGuardUser $sfGuardUser)
+    {
+	$this->sfGuardUser = $sfGuardUser;
+    }
+
+    /**
+     * 
+     * @return sfGuardUser
+     */
+    public function getSfGuardUser()
+    {
+	return $this->sfGuardUser;
+    }
+
+    /**
+     * registers a new user and sfGuard user
+     * @return mixed boolean|Exception (success, error)
+     */
+    public function register()
+    {
+	// make sure we have a valid 
+	if(!$this->getSfGuardUser() instanceof sfGuardUser) {
+	    throw new Exception("Cant register user with sfGuardUser object");
+	}
+	// now do the save on sfGuard
+	$this->getSfGuardUser()->save();
+	// set the UserDetails objects user_id
+	$this->setUserId($this->getSfGuardUser()->getId());
+	// save the UserDetail object
+	$this->save();
+	// all good!
+	return true;
+    }
+
+    /**
+     * override the default save behaviour
+     * @param Doctrine_Connection $conn
+     */
+    public function save(Doctrine_Connection $conn = null)
+    {
+	return parent::save();
+    }    
 }

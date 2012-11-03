@@ -4,6 +4,10 @@ registration:
   url:   /registration
   param: { module: registration, action: index }
 
+list_user_repo:
+  url:   /user_repos
+  param: { module: registration, action: listUserRepo }
+
 sf_guard_signin:
   url:   /login
   param: { module: sfGuardAuth, action: signin }

@@ -16,4 +16,27 @@ class UserDetailsTable extends Doctrine_Table
     {
         return Doctrine_Core::getTable('UserDetails');
     }
+    
+    /**
+     * check if a github username is already registered
+     * @param type $githubUsername
+     * @return boolean 
+     */
+    public static function checkGithubUsernameExists($githubUsername)
+    {
+	// create the query
+	$q = Doctrine_Query::create();
+	$q->select("u.github_username");
+	$q->from("UserDetails u");        
+	$q->addWhere("u.github_username= ?", $githubUsername);        
+	// execute the query and return the resultset
+        $res = $q->fetchArray();
+        if(count($res) > 0) {
+            // email exists
+            return true;
+        } else {
+            // email doesnt exist
+            return false;
+        }
+    }        
 }

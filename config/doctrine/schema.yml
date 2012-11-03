@@ -5,10 +5,10 @@ UserDetails:
     charset: utf8    
   tableName: user_detail
   columns:
+    user_id: { type: integer } 
     github_username: { type: string(255), notnull: true } 
   relations:
-    User: { class: sfGuardUser, local: id, foreignAlias: sfGuardUser, type: one }
-    
+    User: { class: sfGuardUser, local: id, foreignAlias: sfGuardUser, type: one }    
     
 GitHubAccount:
   options:

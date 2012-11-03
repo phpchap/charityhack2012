@@ -13,10 +13,12 @@ abstract class BaseUserDetailsFormFilter extends BaseFormFilterDoctrine
   public function setup()
   {
     $this->setWidgets(array(
+      'user_id'         => new sfWidgetFormFilterInput(),
       'github_username' => new sfWidgetFormFilterInput(array('with_empty' => false)),
     ));
 
     $this->setValidators(array(
+      'user_id'         => new sfValidatorSchemaFilter('text', new sfValidatorInteger(array('required' => false))),
       'github_username' => new sfValidatorPass(array('required' => false)),
     ));
 
@@ -38,6 +40,7 @@ abstract class BaseUserDetailsFormFilter extends BaseFormFilterDoctrine
   {
     return array(
       'id'              => 'Number',
+      'user_id'         => 'Number',
       'github_username' => 'Text',
     );
   }
