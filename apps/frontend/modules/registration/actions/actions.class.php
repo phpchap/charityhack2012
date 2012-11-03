@@ -13,11 +13,16 @@ class registrationActions extends sfActions {
 
     
     public function preExecute() {
+        
         parent::preExecute();       
-        $this->gitClient = new Github\Client();        
+        
+        // get the twitter client
+        $this->gitClient = new Github\Client();
+        
+        // grab a few bits for use down thar
         if($this->getUser()->isAuthenticated()) {
- 
-
+            $this->githubUsername = $this->getUser()->getAttribute('github_username');
+            $this->userId = $this->getUser()->getGuardUser()->getId();            
         }
     }
     
@@ -60,7 +65,10 @@ class registrationActions extends sfActions {
 
                 // sign the user in.. 
                 $this->getUser()->signin($sfGuardUser, false);
-                            
+                
+                // add a few bits into the session
+                $this->getUser()->setAttribute('github_username', $submittedData['github_username']);
+                                
                 // redirect the user to the next step
                 $this->redirect("@list_user_repo");
             }                        
@@ -74,10 +82,77 @@ class registrationActions extends sfActions {
      */
     public function executeListUserRepo(sfWebRequest $request) {
         
-        $this->userRepos = 
-        
-        die('-2');
+        // fetch a list of user repos
+        $this->userRepos = $this->getUserRepos();
+
+    	// has the form been submitted?
+	if ($request->isMethod('post')) {
+            
+            // loop over each repo and get the name
+            foreach($_POST['repo_name'] as $repoName) {
+                
+                // add if not exists
+                if(GitHubRepoTable::checkRepoNameExists($repoName) != true) {
+                    // create github repo acc
+                    $g = new GitHubRepo;
+                    $g->setRepoName($repoName);
+                    $g->setUserId($this->userId);
+                    $g->save();                    
+                }                
+            }
+            
+            // redirect to the list page
+            $this->redirect("@list_user_issues");
+         }
     }
     
+    /**
+     * Executes list repo issues
+     *
+     * @param sfRequest $request A request object
+     */
+    public function executeListIssues(sfWebRequest $request) {
+        
+        
+        $this->issues = $client->api('issue')->all($this0, 'php-github-api', array('state' => 'open'));
+        
+        /*
+        // fetch a list of user repos
+        $this->userRepos = $this->getUserRepos();
+
+    	// has the form been submitted?
+	if ($request->isMethod('post')) {
+            
+            // loop over each repo and get the name
+            foreach($_POST['repo_name'] as $repoName) {
+
+                // create github repo acc
+                $g = new GitHubRepo;
+                $g->namegithub_repo = $repoName;
+                $g->user_id = $this->userId;
+                $g->save();
+            }
+
+         }
+         * 
+         */
+    }
     
+    // PRIVATE FUNCTIONS
+    
+    /**
+     * fetch a list of a users github repositories
+     * @param string $user
+     * @return array
+     */
+    private function getUserRepos($user="") 
+    {
+        if($user == "") {
+            $user = $this->githubUsername;
+        }
+        return $this->gitClient->api('user')->repositories($user);
+        
+    }
+    
+
 }

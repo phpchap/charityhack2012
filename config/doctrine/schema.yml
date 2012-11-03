@@ -10,13 +10,27 @@ UserDetails:
   relations:
     User: { class: sfGuardUser, local: id, foreignAlias: sfGuardUser, type: one }    
     
-GitHubAccount:
+GitHubRepo:
   options:
     type: InnoDB
     collate: utf8_unicode_ci
     charset: utf8    
   tableName: user_repo
   columns:
-    github_repo: { type: string(255), notnull: true } 
+    user_id: { type: integer } 
+    repo_name: { type: string(255), notnull: true } 
   relations:
     GitRepo: { class: sfGuardUser, local: id, foreignAlias: sfGuardUser, type: many }    
+    
+GitHubIssue:
+  options:
+    type: InnoDB
+    collate: utf8_unicode_ci
+    charset: utf8    
+  tableName: user_issue
+  columns:
+    repo_id: { type: integer } 
+    user_id: { type: integer } 
+    repo_name: { type: string(255), notnull: true } 
+  relations:
+    GitRepo: { class: sfGuardUser, local: id, foreignAlias: sfGuardUser, type: many }        

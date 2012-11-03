@@ -8,6 +8,10 @@ list_user_repo:
   url:   /user_repos
   param: { module: registration, action: listUserRepo }
 
+list_user_issues:
+  url:   /list_issues
+  param: { module: registration, action: listIssues }
+
 sf_guard_signin:
   url:   /login
   param: { module: sfGuardAuth, action: signin }

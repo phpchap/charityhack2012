@@ -997,3 +997,1046 @@ Nov 03 16:45:58 symfony [info] {registrationActions} Call "registrationActions->
 Nov 03 16:47:01 symfony [info] {sfPatternRouting} Match route "list_user_repo" (/user_repos) for /user_repos with parameters array (  'module' => 'registration',  'action' => 'listUserRepo',)
 Nov 03 16:47:01 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
 Nov 03 16:47:01 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Nov 03 16:51:36 symfony [info] {sfPatternRouting} Match route "registration" (/registration) for /registration with parameters array (  'module' => 'registration',  'action' => 'index',)
+Nov 03 16:51:36 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Nov 03 16:51:36 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Nov 03 16:51:36 symfony [info] {registrationActions} Call "registrationActions->executeIndex()"
+Nov 03 16:51:36 symfony [info] {sfPHPView} Render "/var/www/charityhack2012/apps/frontend/modules/registration/templates/indexSuccess.php"
+Nov 03 16:51:36 symfony [info] {sfPHPView} Decorate content with "/var/www/charityhack2012/apps/frontend/templates/layout.php"
+Nov 03 16:51:36 symfony [info] {sfPHPView} Render "/var/www/charityhack2012/apps/frontend/templates/layout.php"
+Nov 03 16:51:36 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Nov 03 16:51:36 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Nov 03 16:51:36 symfony [info] {sfWebDebugLogger} Configuration 2.29 ms (9)
+Nov 03 16:51:36 symfony [info] {sfWebDebugLogger} Factories 11.61 ms (1)
+Nov 03 16:51:36 symfony [info] {sfWebDebugLogger} Action "registration/index" 22.10 ms (1)
+Nov 03 16:51:36 symfony [info] {sfWebDebugLogger} View "Success" for "registration/index" 5.97 ms (1)
+Nov 03 16:51:36 symfony [info] {sfWebResponse} Send content (30217 o)
+Nov 03 16:51:47 symfony [info] {sfPatternRouting} Match route "registration" (/registration) for /registration with parameters array (  'module' => 'registration',  'action' => 'index',)
+Nov 03 16:51:47 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Nov 03 16:51:47 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Nov 03 16:51:47 symfony [info] {registrationActions} Call "registrationActions->executeIndex()"
+Nov 03 16:51:47 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Nov 03 16:51:47 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.email_address AS s__email_address FROM sf_guard_user s WHERE (s.email_address = ?) - (phpchap@gmail.com)
+Nov 03 16:51:47 symfony [info] {Doctrine_Connection_Statement} execute : SELECT u.id AS u__id, u.github_username AS u__github_username FROM user_detail u WHERE (u.github_username = ?) - (phpchap)
+Nov 03 16:51:47 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO sf_guard_user (algorithm, is_active, is_super_admin, email_address, salt, password, id, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) - (sha1, 1, 0, phpchap@gmail.com, 75a042589ecb3938862fb9f7870bbb35, 7127f7d70853fbceb3f9e13fc5d57a6661f99016, , 2012-11-03 16:51:47, 2012-11-03 16:51:47)
+Nov 03 16:51:47 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO user_detail (github_username, id, user_id) VALUES (?, ?, ?) - (phpchap, , 2)
+Nov 03 16:51:47 symfony [info] {myUser} User is authenticated
+Nov 03 16:51:47 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.name AS s__name, s.description AS s__description, s.created_at AS s__created_at, s.updated_at AS s__updated_at, s2.user_id AS s2__user_id, s2.permission_id AS s2__permission_id, s2.created_at AS s2__created_at, s2.updated_at AS s2__updated_at FROM sf_guard_permission s LEFT JOIN sf_guard_user_permission s2 ON s.id = s2.permission_id WHERE (s2.user_id IN (?)) - (2)
+Nov 03 16:51:47 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.name AS s__name, s.description AS s__description, s.created_at AS s__created_at, s.updated_at AS s__updated_at, s2.user_id AS s2__user_id, s2.group_id AS s2__group_id, s2.created_at AS s2__created_at, s2.updated_at AS s2__updated_at FROM sf_guard_group s LEFT JOIN sf_guard_user_group s2 ON s.id = s2.group_id WHERE (s2.user_id IN (?)) - (2)
+Nov 03 16:51:47 symfony [info] {myUser} Add credential(s) ""
+Nov 03 16:51:47 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (2)
+Nov 03 16:51:47 symfony [info] {Doctrine_Connection_Statement} execute : UPDATE sf_guard_user SET last_login = ? WHERE id = ? - (2012-11-03 16:51:47, 2)
+Nov 03 16:51:47 symfony [info] {sfFrontWebController} Redirect to "http://charityhack.anotherwebdeveloper.com/frontend_dev.php/user_repos"
+Nov 03 16:51:47 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+Nov 03 16:51:47 symfony [info] {sfWebResponse} Send header "Location: http://charityhack.anotherwebdeveloper.com/frontend_dev.php/user_repos"
+Nov 03 16:51:47 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Nov 03 16:51:47 symfony [info] {sfWebDebugLogger} Configuration 1.79 ms (8)
+Nov 03 16:51:47 symfony [info] {sfWebDebugLogger} Factories 10.61 ms (1)
+Nov 03 16:51:47 symfony [info] {sfWebDebugLogger} Action "registration/index" 257.73 ms (1)
+Nov 03 16:51:47 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.14 ms (9)
+Nov 03 16:51:47 symfony [info] {sfWebResponse} Send content (141 o)
+Nov 03 16:51:47 symfony [info] {sfPatternRouting} Match route "list_user_repo" (/user_repos) for /user_repos with parameters array (  'module' => 'registration',  'action' => 'listUserRepo',)
+Nov 03 16:51:47 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Nov 03 16:51:47 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Nov 03 16:51:47 symfony [info] {registrationActions} Call "registrationActions->executeListUserRepo()"
+Nov 03 16:53:29 symfony [info] {sfPatternRouting} Match route "list_user_repo" (/user_repos) for /user_repos with parameters array (  'module' => 'registration',  'action' => 'listUserRepo',)
+Nov 03 16:53:29 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Nov 03 16:53:29 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Nov 03 16:53:29 symfony [info] {registrationActions} Call "registrationActions->executeListUserRepo()"
+Nov 03 16:53:38 symfony [info] {sfPatternRouting} Match route "list_user_repo" (/user_repos) for /user_repos with parameters array (  'module' => 'registration',  'action' => 'listUserRepo',)
+Nov 03 16:53:38 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Nov 03 16:53:38 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Nov 03 16:53:38 symfony [info] {registrationActions} Call "registrationActions->executeListUserRepo()"
+Nov 03 16:54:09 symfony [info] {sfPatternRouting} Match route "list_user_repo" (/user_repos) for /user_repos with parameters array (  'module' => 'registration',  'action' => 'listUserRepo',)
+Nov 03 16:54:09 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Nov 03 16:54:09 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Nov 03 16:54:09 symfony [info] {registrationActions} Call "registrationActions->executeListUserRepo()"
+Nov 03 16:56:54 symfony [info] {sfPatternRouting} Match route "list_user_repo" (/user_repos) for /user_repos with parameters array (  'module' => 'registration',  'action' => 'listUserRepo',)
+Nov 03 16:56:54 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Nov 03 16:56:54 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Nov 03 16:56:54 symfony [info] {registrationActions} Call "registrationActions->executeListUserRepo()"
+Nov 03 16:57:10 symfony [info] {sfPatternRouting} Match route "list_user_repo" (/user_repos) for /user_repos with parameters array (  'module' => 'registration',  'action' => 'listUserRepo',)
+Nov 03 16:57:10 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Nov 03 16:57:10 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Nov 03 16:57:10 symfony [info] {registrationActions} Call "registrationActions->executeListUserRepo()"
+Nov 03 16:57:11 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/charityhack2012/lib/vendor/symfony/lib/exception/sfException.class.php on line 107 (Cannot modify header information - headers already sent by (output started at /var/www/charityhack2012/apps/frontend/modules/registration/actions/actions.class.php:88))
+Nov 03 16:57:11 symfony [err] {sfRenderException} The template "listUserRepoSuccess.php" does not exist or is unreadable in "".
+Nov 03 16:57:11 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/charityhack2012/lib/vendor/symfony/lib/exception/sfException.class.php on line 161 (Cannot modify header information - headers already sent by (output started at /var/www/charityhack2012/apps/frontend/modules/registration/actions/actions.class.php:88))
+Nov 03 16:57:11 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/charityhack2012/lib/vendor/symfony/lib/response/sfWebResponse.class.php on line 336 (Cannot modify header information - headers already sent by (output started at /var/www/charityhack2012/apps/frontend/modules/registration/actions/actions.class.php:88))
+Nov 03 16:57:11 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Nov 03 16:57:11 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/charityhack2012/lib/vendor/symfony/lib/response/sfWebResponse.class.php on line 357 (Cannot modify header information - headers already sent by (output started at /var/www/charityhack2012/apps/frontend/modules/registration/actions/actions.class.php:88))
+Nov 03 16:57:11 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Nov 03 16:57:11 symfony [info] {sfWebDebugLogger} Configuration 2.27 ms (9)
+Nov 03 16:57:11 symfony [info] {sfWebDebugLogger} Factories 8.30 ms (1)
+Nov 03 16:57:11 symfony [info] {sfWebDebugLogger} Action "registration/listUserRepo" 989.47 ms (1)
+Nov 03 16:57:11 symfony [info] {sfWebDebugLogger} View "Success" for "registration/listUserRepo" 53.04 ms (1)
+Nov 03 16:57:11 symfony [info] {sfPatternRouting} Match route "list_user_repo" (/user_repos) for /user_repos with parameters array (  'module' => 'registration',  'action' => 'listUserRepo',)
+Nov 03 16:57:11 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Nov 03 16:57:11 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Nov 03 16:57:11 symfony [info] {registrationActions} Call "registrationActions->executeListUserRepo()"
+Nov 03 16:57:11 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/charityhack2012/lib/vendor/symfony/lib/exception/sfException.class.php on line 107 (Cannot modify header information - headers already sent by (output started at /var/www/charityhack2012/apps/frontend/modules/registration/actions/actions.class.php:88))
+Nov 03 16:57:11 symfony [err] {sfRenderException} The template "listUserRepoSuccess.php" does not exist or is unreadable in "".
+Nov 03 16:57:11 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/charityhack2012/lib/vendor/symfony/lib/exception/sfException.class.php on line 161 (Cannot modify header information - headers already sent by (output started at /var/www/charityhack2012/apps/frontend/modules/registration/actions/actions.class.php:88))
+Nov 03 16:57:11 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/charityhack2012/lib/vendor/symfony/lib/response/sfWebResponse.class.php on line 336 (Cannot modify header information - headers already sent by (output started at /var/www/charityhack2012/apps/frontend/modules/registration/actions/actions.class.php:88))
+Nov 03 16:57:11 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Nov 03 16:57:11 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/charityhack2012/lib/vendor/symfony/lib/response/sfWebResponse.class.php on line 357 (Cannot modify header information - headers already sent by (output started at /var/www/charityhack2012/apps/frontend/modules/registration/actions/actions.class.php:88))
+Nov 03 16:57:11 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Nov 03 16:57:11 symfony [info] {sfWebDebugLogger} Configuration 2.25 ms (9)
+Nov 03 16:57:11 symfony [info] {sfWebDebugLogger} Factories 8.34 ms (1)
+Nov 03 16:57:11 symfony [info] {sfWebDebugLogger} Action "registration/listUserRepo" 655.56 ms (1)
+Nov 03 16:57:11 symfony [info] {sfWebDebugLogger} View "Success" for "registration/listUserRepo" 50.25 ms (1)
+Nov 03 17:04:10 symfony [info] {sfPatternRouting} Match route "list_user_repo" (/user_repos) for /user_repos with parameters array (  'module' => 'registration',  'action' => 'listUserRepo',)
+Nov 03 17:04:10 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Nov 03 17:04:10 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Nov 03 17:04:10 symfony [info] {registrationActions} Call "registrationActions->executeListUserRepo()"
+Nov 03 17:04:11 symfony [info] {sfPHPView} Render "/var/www/charityhack2012/apps/frontend/modules/registration/templates/listUserRepoSuccess.php"
+Nov 03 17:04:11 symfony [info] {sfPHPView} Decorate content with "/var/www/charityhack2012/apps/frontend/templates/layout.php"
+Nov 03 17:04:11 symfony [info] {sfPHPView} Render "/var/www/charityhack2012/apps/frontend/templates/layout.php"
+Nov 03 17:04:11 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/charityhack2012/lib/vendor/symfony/lib/response/sfWebResponse.class.php on line 336 (Cannot modify header information - headers already sent by (output started at /var/www/charityhack2012/apps/frontend/modules/registration/actions/actions.class.php:88))
+Nov 03 17:04:11 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Nov 03 17:04:11 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/charityhack2012/lib/vendor/symfony/lib/response/sfWebResponse.class.php on line 357 (Cannot modify header information - headers already sent by (output started at /var/www/charityhack2012/apps/frontend/modules/registration/actions/actions.class.php:88))
+Nov 03 17:04:11 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Nov 03 17:04:11 symfony [info] {sfWebDebugLogger} Configuration 2.51 ms (9)
+Nov 03 17:04:11 symfony [info] {sfWebDebugLogger} Factories 7.32 ms (1)
+Nov 03 17:04:11 symfony [info] {sfWebDebugLogger} Action "registration/listUserRepo" 742.12 ms (1)
+Nov 03 17:04:11 symfony [info] {sfWebDebugLogger} View "Success" for "registration/listUserRepo" 13.48 ms (1)
+Nov 03 17:04:11 symfony [info] {sfWebResponse} Send content (73664 o)
+Nov 03 17:04:11 symfony [info] {sfPatternRouting} Match route "list_user_repo" (/user_repos) for /user_repos with parameters array (  'module' => 'registration',  'action' => 'listUserRepo',)
+Nov 03 17:04:11 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Nov 03 17:04:11 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Nov 03 17:04:11 symfony [info] {registrationActions} Call "registrationActions->executeListUserRepo()"
+Nov 03 17:04:12 symfony [info] {sfPHPView} Render "/var/www/charityhack2012/apps/frontend/modules/registration/templates/listUserRepoSuccess.php"
+Nov 03 17:04:12 symfony [info] {sfPHPView} Decorate content with "/var/www/charityhack2012/apps/frontend/templates/layout.php"
+Nov 03 17:04:12 symfony [info] {sfPHPView} Render "/var/www/charityhack2012/apps/frontend/templates/layout.php"
+Nov 03 17:04:12 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/charityhack2012/lib/vendor/symfony/lib/response/sfWebResponse.class.php on line 336 (Cannot modify header information - headers already sent by (output started at /var/www/charityhack2012/apps/frontend/modules/registration/actions/actions.class.php:88))
+Nov 03 17:04:12 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Nov 03 17:04:12 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/charityhack2012/lib/vendor/symfony/lib/response/sfWebResponse.class.php on line 357 (Cannot modify header information - headers already sent by (output started at /var/www/charityhack2012/apps/frontend/modules/registration/actions/actions.class.php:88))
+Nov 03 17:04:12 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Nov 03 17:04:12 symfony [info] {sfWebDebugLogger} Configuration 1.91 ms (9)
+Nov 03 17:04:12 symfony [info] {sfWebDebugLogger} Factories 6.95 ms (1)
+Nov 03 17:04:12 symfony [info] {sfWebDebugLogger} Action "registration/listUserRepo" 665.58 ms (1)
+Nov 03 17:04:12 symfony [info] {sfWebDebugLogger} View "Success" for "registration/listUserRepo" 8.84 ms (1)
+Nov 03 17:04:12 symfony [info] {sfWebResponse} Send content (73663 o)
+Nov 03 17:04:26 symfony [info] {sfPatternRouting} Match route "list_user_repo" (/user_repos) for /user_repos with parameters array (  'module' => 'registration',  'action' => 'listUserRepo',)
+Nov 03 17:04:26 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Nov 03 17:04:26 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Nov 03 17:04:26 symfony [info] {registrationActions} Call "registrationActions->executeListUserRepo()"
+Nov 03 17:04:27 symfony [info] {sfPHPView} Render "/var/www/charityhack2012/apps/frontend/modules/registration/templates/listUserRepoSuccess.php"
+Nov 03 17:04:27 symfony [info] {sfPHPView} Decorate content with "/var/www/charityhack2012/apps/frontend/templates/layout.php"
+Nov 03 17:04:27 symfony [info] {sfPHPView} Render "/var/www/charityhack2012/apps/frontend/templates/layout.php"
+Nov 03 17:04:27 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/charityhack2012/lib/vendor/symfony/lib/response/sfWebResponse.class.php on line 336 (Cannot modify header information - headers already sent by (output started at /var/www/charityhack2012/apps/frontend/modules/registration/actions/actions.class.php:88))
+Nov 03 17:04:27 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Nov 03 17:04:27 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/charityhack2012/lib/vendor/symfony/lib/response/sfWebResponse.class.php on line 357 (Cannot modify header information - headers already sent by (output started at /var/www/charityhack2012/apps/frontend/modules/registration/actions/actions.class.php:88))
+Nov 03 17:04:27 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Nov 03 17:04:27 symfony [info] {sfWebDebugLogger} Configuration 2.60 ms (9)
+Nov 03 17:04:27 symfony [info] {sfWebDebugLogger} Factories 9.13 ms (1)
+Nov 03 17:04:27 symfony [info] {sfWebDebugLogger} Action "registration/listUserRepo" 732.67 ms (1)
+Nov 03 17:04:27 symfony [info] {sfWebDebugLogger} View "Success" for "registration/listUserRepo" 9.10 ms (1)
+Nov 03 17:04:27 symfony [info] {sfWebResponse} Send content (49202 o)
+Nov 03 17:04:27 symfony [info] {sfPatternRouting} Match route "list_user_repo" (/user_repos) for /user_repos with parameters array (  'module' => 'registration',  'action' => 'listUserRepo',)
+Nov 03 17:04:27 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Nov 03 17:04:27 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Nov 03 17:04:27 symfony [info] {registrationActions} Call "registrationActions->executeListUserRepo()"
+Nov 03 17:04:28 symfony [info] {sfPHPView} Render "/var/www/charityhack2012/apps/frontend/modules/registration/templates/listUserRepoSuccess.php"
+Nov 03 17:04:28 symfony [info] {sfPHPView} Decorate content with "/var/www/charityhack2012/apps/frontend/templates/layout.php"
+Nov 03 17:04:28 symfony [info] {sfPHPView} Render "/var/www/charityhack2012/apps/frontend/templates/layout.php"
+Nov 03 17:04:28 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/charityhack2012/lib/vendor/symfony/lib/response/sfWebResponse.class.php on line 336 (Cannot modify header information - headers already sent by (output started at /var/www/charityhack2012/apps/frontend/modules/registration/actions/actions.class.php:88))
+Nov 03 17:04:28 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Nov 03 17:04:28 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/charityhack2012/lib/vendor/symfony/lib/response/sfWebResponse.class.php on line 357 (Cannot modify header information - headers already sent by (output started at /var/www/charityhack2012/apps/frontend/modules/registration/actions/actions.class.php:88))
+Nov 03 17:04:28 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Nov 03 17:04:28 symfony [info] {sfWebDebugLogger} Configuration 2.34 ms (9)
+Nov 03 17:04:28 symfony [info] {sfWebDebugLogger} Factories 10.16 ms (1)
+Nov 03 17:04:28 symfony [info] {sfWebDebugLogger} Action "registration/listUserRepo" 656.96 ms (1)
+Nov 03 17:04:28 symfony [info] {sfWebDebugLogger} View "Success" for "registration/listUserRepo" 4.84 ms (1)
+Nov 03 17:04:28 symfony [info] {sfWebResponse} Send content (49203 o)
+Nov 03 17:11:11 symfony [info] {sfPatternRouting} Match route "list_user_repo" (/user_repos) for /user_repos with parameters array (  'module' => 'registration',  'action' => 'listUserRepo',)
+Nov 03 17:11:11 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Nov 03 17:11:11 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Nov 03 17:11:11 symfony [info] {registrationActions} Call "registrationActions->executeListUserRepo()"
+Nov 03 17:11:12 symfony [info] {sfPHPView} Render "/var/www/charityhack2012/apps/frontend/modules/registration/templates/listUserRepoSuccess.php"
+Nov 03 17:11:12 symfony [info] {sfPHPView} Decorate content with "/var/www/charityhack2012/apps/frontend/templates/layout.php"
+Nov 03 17:11:12 symfony [info] {sfPHPView} Render "/var/www/charityhack2012/apps/frontend/templates/layout.php"
+Nov 03 17:11:12 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/charityhack2012/lib/vendor/symfony/lib/response/sfWebResponse.class.php on line 336 (Cannot modify header information - headers already sent by (output started at /var/www/charityhack2012/apps/frontend/modules/registration/actions/actions.class.php:88))
+Nov 03 17:11:12 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Nov 03 17:11:12 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/charityhack2012/lib/vendor/symfony/lib/response/sfWebResponse.class.php on line 357 (Cannot modify header information - headers already sent by (output started at /var/www/charityhack2012/apps/frontend/modules/registration/actions/actions.class.php:88))
+Nov 03 17:11:12 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Nov 03 17:11:12 symfony [info] {sfWebDebugLogger} Configuration 2.17 ms (9)
+Nov 03 17:11:12 symfony [info] {sfWebDebugLogger} Factories 7.65 ms (1)
+Nov 03 17:11:12 symfony [info] {sfWebDebugLogger} Action "registration/listUserRepo" 925.51 ms (1)
+Nov 03 17:11:12 symfony [info] {sfWebDebugLogger} View "Success" for "registration/listUserRepo" 6.26 ms (1)
+Nov 03 17:11:12 symfony [info] {sfWebResponse} Send content (34523 o)
+Nov 03 17:11:12 symfony [info] {sfPatternRouting} Match route "list_user_repo" (/user_repos) for /user_repos with parameters array (  'module' => 'registration',  'action' => 'listUserRepo',)
+Nov 03 17:11:12 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Nov 03 17:11:12 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Nov 03 17:11:12 symfony [info] {registrationActions} Call "registrationActions->executeListUserRepo()"
+Nov 03 17:11:12 symfony [info] {sfPHPView} Render "/var/www/charityhack2012/apps/frontend/modules/registration/templates/listUserRepoSuccess.php"
+Nov 03 17:11:12 symfony [info] {sfPHPView} Decorate content with "/var/www/charityhack2012/apps/frontend/templates/layout.php"
+Nov 03 17:11:12 symfony [info] {sfPHPView} Render "/var/www/charityhack2012/apps/frontend/templates/layout.php"
+Nov 03 17:11:12 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/charityhack2012/lib/vendor/symfony/lib/response/sfWebResponse.class.php on line 336 (Cannot modify header information - headers already sent by (output started at /var/www/charityhack2012/apps/frontend/modules/registration/actions/actions.class.php:88))
+Nov 03 17:11:12 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Nov 03 17:11:12 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/charityhack2012/lib/vendor/symfony/lib/response/sfWebResponse.class.php on line 357 (Cannot modify header information - headers already sent by (output started at /var/www/charityhack2012/apps/frontend/modules/registration/actions/actions.class.php:88))
+Nov 03 17:11:12 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Nov 03 17:11:12 symfony [info] {sfWebDebugLogger} Configuration 2.39 ms (9)
+Nov 03 17:11:12 symfony [info] {sfWebDebugLogger} Factories 10.46 ms (1)
+Nov 03 17:11:12 symfony [info] {sfWebDebugLogger} Action "registration/listUserRepo" 661.08 ms (1)
+Nov 03 17:11:12 symfony [info] {sfWebDebugLogger} View "Success" for "registration/listUserRepo" 7.99 ms (1)
+Nov 03 17:11:12 symfony [info] {sfWebResponse} Send content (34524 o)
+Nov 03 17:11:33 symfony [info] {sfPatternRouting} Match route "list_user_repo" (/user_repos) for /user_repos with parameters array (  'module' => 'registration',  'action' => 'listUserRepo',)
+Nov 03 17:11:33 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Nov 03 17:11:33 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Nov 03 17:11:33 symfony [info] {registrationActions} Call "registrationActions->executeListUserRepo()"
+Nov 03 17:11:34 symfony [info] {sfPHPView} Render "/var/www/charityhack2012/apps/frontend/modules/registration/templates/listUserRepoSuccess.php"
+Nov 03 17:11:34 symfony [info] {sfPHPView} Decorate content with "/var/www/charityhack2012/apps/frontend/templates/layout.php"
+Nov 03 17:11:34 symfony [info] {sfPHPView} Render "/var/www/charityhack2012/apps/frontend/templates/layout.php"
+Nov 03 17:11:34 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Nov 03 17:11:34 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Nov 03 17:11:34 symfony [info] {sfWebDebugLogger} Configuration 2.77 ms (9)
+Nov 03 17:11:34 symfony [info] {sfWebDebugLogger} Factories 12.10 ms (1)
+Nov 03 17:11:34 symfony [info] {sfWebDebugLogger} Action "registration/listUserRepo" 763.63 ms (1)
+Nov 03 17:11:34 symfony [info] {sfWebDebugLogger} View "Success" for "registration/listUserRepo" 8.51 ms (1)
+Nov 03 17:11:34 symfony [info] {sfWebResponse} Send content (34524 o)
+Nov 03 17:11:56 symfony [info] {sfPatternRouting} Match route "list_user_repo" (/user_repos) for /user_repos with parameters array (  'module' => 'registration',  'action' => 'listUserRepo',)
+Nov 03 17:11:56 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Nov 03 17:11:56 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Nov 03 17:11:56 symfony [info] {registrationActions} Call "registrationActions->executeListUserRepo()"
+Nov 03 17:11:56 symfony [info] {sfPHPView} Render "/var/www/charityhack2012/apps/frontend/modules/registration/templates/listUserRepoSuccess.php"
+Nov 03 17:11:56 symfony [info] {sfPHPView} Decorate content with "/var/www/charityhack2012/apps/frontend/templates/layout.php"
+Nov 03 17:11:56 symfony [info] {sfPHPView} Render "/var/www/charityhack2012/apps/frontend/templates/layout.php"
+Nov 03 17:11:56 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Nov 03 17:11:56 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Nov 03 17:11:56 symfony [info] {sfWebDebugLogger} Configuration 2.33 ms (9)
+Nov 03 17:11:56 symfony [info] {sfWebDebugLogger} Factories 7.52 ms (1)
+Nov 03 17:11:56 symfony [info] {sfWebDebugLogger} Action "registration/listUserRepo" 771.22 ms (1)
+Nov 03 17:11:56 symfony [info] {sfWebDebugLogger} View "Success" for "registration/listUserRepo" 3.84 ms (1)
+Nov 03 17:11:56 symfony [info] {sfWebResponse} Send content (34519 o)
+Nov 03 17:12:52 symfony [info] {sfPatternRouting} Match route "list_user_repo" (/user_repos) for /user_repos with parameters array (  'module' => 'registration',  'action' => 'listUserRepo',)
+Nov 03 17:12:52 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Nov 03 17:12:52 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Nov 03 17:12:52 symfony [info] {registrationActions} Call "registrationActions->executeListUserRepo()"
+Nov 03 17:12:52 symfony [info] {sfPHPView} Render "/var/www/charityhack2012/apps/frontend/modules/registration/templates/listUserRepoSuccess.php"
+Nov 03 17:12:52 symfony [info] {sfPHPView} Decorate content with "/var/www/charityhack2012/apps/frontend/templates/layout.php"
+Nov 03 17:12:52 symfony [info] {sfPHPView} Render "/var/www/charityhack2012/apps/frontend/templates/layout.php"
+Nov 03 17:12:52 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Nov 03 17:12:52 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Nov 03 17:12:52 symfony [info] {sfWebDebugLogger} Configuration 2.40 ms (9)
+Nov 03 17:12:52 symfony [info] {sfWebDebugLogger} Factories 9.23 ms (1)
+Nov 03 17:12:52 symfony [info] {sfWebDebugLogger} Action "registration/listUserRepo" 759.68 ms (1)
+Nov 03 17:12:52 symfony [info] {sfWebDebugLogger} View "Success" for "registration/listUserRepo" 3.66 ms (1)
+Nov 03 17:12:52 symfony [info] {sfWebResponse} Send content (35331 o)
+Nov 03 17:13:46 symfony [info] {sfPatternRouting} Match route "list_user_repo" (/user_repos) for /user_repos with parameters array (  'module' => 'registration',  'action' => 'listUserRepo',)
+Nov 03 17:13:46 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Nov 03 17:13:46 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Nov 03 17:13:46 symfony [info] {registrationActions} Call "registrationActions->executeListUserRepo()"
+Nov 03 17:13:47 symfony [info] {sfPHPView} Render "/var/www/charityhack2012/apps/frontend/modules/registration/templates/listUserRepoSuccess.php"
+Nov 03 17:13:47 symfony [info] {sfPHPView} Decorate content with "/var/www/charityhack2012/apps/frontend/templates/layout.php"
+Nov 03 17:13:47 symfony [info] {sfPHPView} Render "/var/www/charityhack2012/apps/frontend/templates/layout.php"
+Nov 03 17:13:47 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Nov 03 17:13:47 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Nov 03 17:13:47 symfony [info] {sfWebDebugLogger} Configuration 2.49 ms (9)
+Nov 03 17:13:47 symfony [info] {sfWebDebugLogger} Factories 11.26 ms (1)
+Nov 03 17:13:47 symfony [info] {sfWebDebugLogger} Action "registration/listUserRepo" 757.11 ms (1)
+Nov 03 17:13:47 symfony [info] {sfWebDebugLogger} View "Success" for "registration/listUserRepo" 4.01 ms (1)
+Nov 03 17:13:47 symfony [info] {sfWebResponse} Send content (35377 o)
+Nov 03 17:57:47 symfony [info] {sfPatternRouting} Match route "list_user_repo" (/user_repos) for /user_repos with parameters array (  'module' => 'registration',  'action' => 'listUserRepo',)
+Nov 03 17:57:47 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Nov 03 17:57:47 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Nov 03 17:57:47 symfony [info] {registrationActions} Call "registrationActions->executeListUserRepo()"
+Nov 03 17:57:48 symfony [err] {Github\Exception\RuntimeException} Not Found
+Nov 03 17:57:48 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Nov 03 17:57:48 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Nov 03 17:57:48 symfony [info] {sfWebDebugLogger} Configuration 1.42 ms (8)
+Nov 03 17:57:48 symfony [info] {sfWebDebugLogger} Factories 6.94 ms (1)
+Nov 03 17:57:48 symfony [info] {sfWebDebugLogger} Action "registration/listUserRepo" 706.98 ms (1)
+Nov 03 18:13:17 symfony [info] {sfPatternRouting} Match route "list_user_repo" (/user_repos) for /user_repos with parameters array (  'module' => 'registration',  'action' => 'listUserRepo',)
+Nov 03 18:13:17 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Nov 03 18:13:17 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Nov 03 18:13:17 symfony [info] {sfBasicSecurityFilter} Action "registration/listUserRepo" requires authentication, forwarding to "default/login"
+Nov 03 18:13:17 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Nov 03 18:13:17 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Nov 03 18:13:17 symfony [info] {defaultActions} Call "defaultActions->executeLogin()"
+Nov 03 18:13:17 symfony [info] {sfPHPView} Render "/var/www/charityhack2012/lib/vendor/symfony/lib/controller/default/templates/loginSuccess.php"
+Nov 03 18:13:17 symfony [err] {sfConfigurationException} Unable to find a matching route to generate url for params "array (  'action' => 'login',  'module' => 'default',)".
+Nov 03 18:13:17 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Nov 03 18:13:17 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Nov 03 18:13:17 symfony [info] {sfWebDebugLogger} Configuration 24.50 ms (13)
+Nov 03 18:13:17 symfony [info] {sfWebDebugLogger} Factories 7.18 ms (1)
+Nov 03 18:13:17 symfony [info] {sfWebDebugLogger} Action "default/login" 0.22 ms (1)
+Nov 03 18:13:17 symfony [info] {sfWebDebugLogger} View "Success" for "default/login" 50.69 ms (1)
+Nov 03 18:14:55 symfony [info] {sfPatternRouting} Match route "list_user_repo" (/user_repos) for /user_repos with parameters array (  'module' => 'registration',  'action' => 'listUserRepo',)
+Nov 03 18:14:55 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Nov 03 18:14:55 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Nov 03 18:14:55 symfony [info] {sfBasicSecurityFilter} Action "registration/listUserRepo" requires authentication, forwarding to "default/login"
+Nov 03 18:14:55 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Nov 03 18:14:55 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Nov 03 18:14:55 symfony [info] {defaultActions} Call "defaultActions->executeLogin()"
+Nov 03 18:14:55 symfony [info] {sfPHPView} Render "/var/www/charityhack2012/lib/vendor/symfony/lib/controller/default/templates/loginSuccess.php"
+Nov 03 18:14:55 symfony [err] {sfConfigurationException} Unable to find a matching route to generate url for params "array (  'action' => 'login',  'module' => 'default',)".
+Nov 03 18:14:55 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Nov 03 18:14:55 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Nov 03 18:14:55 symfony [info] {sfWebDebugLogger} Configuration 57.79 ms (13)
+Nov 03 18:14:55 symfony [info] {sfWebDebugLogger} Factories 64.32 ms (1)
+Nov 03 18:14:55 symfony [info] {sfWebDebugLogger} Action "default/login" 0.18 ms (1)
+Nov 03 18:14:55 symfony [info] {sfWebDebugLogger} View "Success" for "default/login" 43.89 ms (1)
+Nov 03 18:17:09 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Nov 03 18:17:09 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Nov 03 18:17:09 symfony [info] {sfPatternRouting} Match route "list_user_repo" (/user_repos) for /user_repos with parameters array (  'module' => 'registration',  'action' => 'listUserRepo',)
+Nov 03 18:17:09 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Nov 03 18:17:09 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Nov 03 18:17:09 symfony [info] {sfBasicSecurityFilter} Action "registration/listUserRepo" requires authentication, forwarding to "sfGuardAuth/signin"
+Nov 03 18:17:09 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Nov 03 18:17:09 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Nov 03 18:17:09 symfony [info] {sfGuardAuthActions} Call "sfGuardAuthActions->executeSignin()"
+Nov 03 18:17:09 symfony [info] {sfPHPView} Render "/var/www/charityhack2012/plugins/sfDoctrineGuardPlugin/modules/sfGuardAuth/templates/signinSuccess.php"
+Nov 03 18:17:09 symfony [info] {sfPartialView} Render "/var/www/charityhack2012/plugins/sfDoctrineGuardPlugin/modules/sfGuardAuth/templates/_signin_form.php"
+Nov 03 18:17:09 symfony [info] {sfPHPView} Decorate content with "/var/www/charityhack2012/apps/frontend/templates/layout.php"
+Nov 03 18:17:09 symfony [info] {sfPHPView} Render "/var/www/charityhack2012/apps/frontend/templates/layout.php"
+Nov 03 18:17:09 symfony [info] {sfWebResponse} Send status "HTTP/1.1 401 Unauthorized"
+Nov 03 18:17:09 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Nov 03 18:17:09 symfony [info] {sfWebDebugLogger} Configuration 175.06 ms (12)
+Nov 03 18:17:09 symfony [info] {sfWebDebugLogger} Factories 109.54 ms (1)
+Nov 03 18:17:09 symfony [info] {sfWebDebugLogger} Action "sfGuardAuth/signin" 4.32 ms (1)
+Nov 03 18:17:09 symfony [info] {sfWebDebugLogger} View "Success" for "sfGuardAuth/signin" 13.77 ms (1)
+Nov 03 18:17:09 symfony [info] {sfWebDebugLogger} Partial "sfGuardAuth/_signin_form" 3.37 ms (1)
+Nov 03 18:17:09 symfony [info] {sfWebResponse} Send content (34513 o)
+Nov 03 18:17:31 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Nov 03 18:17:31 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Nov 03 18:17:31 symfony [info] {sfPatternRouting} Match route "sf_guard_signin" (/login) for /login with parameters array (  'module' => 'sfGuardAuth',  'action' => 'signin',)
+Nov 03 18:17:31 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Nov 03 18:17:31 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Nov 03 18:17:31 symfony [info] {sfGuardAuthActions} Call "sfGuardAuthActions->executeSignin()"
+Nov 03 18:17:31 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Nov 03 18:17:31 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.username = ? AND s.is_active = ?) - (phpchap@gmail.com, 1)
+Nov 03 18:17:31 symfony [info] {sfPHPView} Render "/var/www/charityhack2012/plugins/sfDoctrineGuardPlugin/modules/sfGuardAuth/templates/signinSuccess.php"
+Nov 03 18:17:31 symfony [info] {sfPartialView} Render "/var/www/charityhack2012/plugins/sfDoctrineGuardPlugin/modules/sfGuardAuth/templates/_signin_form.php"
+Nov 03 18:17:31 symfony [info] {sfPHPView} Decorate content with "/var/www/charityhack2012/apps/frontend/templates/layout.php"
+Nov 03 18:17:31 symfony [info] {sfPHPView} Render "/var/www/charityhack2012/apps/frontend/templates/layout.php"
+Nov 03 18:17:31 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Nov 03 18:17:31 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Nov 03 18:17:31 symfony [info] {sfWebDebugLogger} Configuration 2.29 ms (9)
+Nov 03 18:17:31 symfony [info] {sfWebDebugLogger} Factories 9.91 ms (1)
+Nov 03 18:17:31 symfony [info] {sfWebDebugLogger} Action "sfGuardAuth/signin" 29.03 ms (1)
+Nov 03 18:17:31 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.03 ms (2)
+Nov 03 18:17:31 symfony [info] {sfWebDebugLogger} View "Success" for "sfGuardAuth/signin" 14.58 ms (1)
+Nov 03 18:17:31 symfony [info] {sfWebDebugLogger} Partial "sfGuardAuth/_signin_form" 4.94 ms (1)
+Nov 03 18:17:31 symfony [info] {sfWebResponse} Send content (38071 o)
+Nov 03 18:17:36 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Nov 03 18:17:36 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Nov 03 18:17:36 symfony [info] {sfPatternRouting} Match route "sf_guard_signin" (/login) for /login with parameters array (  'module' => 'sfGuardAuth',  'action' => 'signin',)
+Nov 03 18:17:36 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Nov 03 18:17:36 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Nov 03 18:17:36 symfony [info] {sfGuardAuthActions} Call "sfGuardAuthActions->executeSignin()"
+Nov 03 18:17:36 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Nov 03 18:17:36 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.username = ? AND s.is_active = ?) - (phpchap@gmail.com, 1)
+Nov 03 18:17:36 symfony [info] {sfPHPView} Render "/var/www/charityhack2012/plugins/sfDoctrineGuardPlugin/modules/sfGuardAuth/templates/signinSuccess.php"
+Nov 03 18:17:36 symfony [info] {sfPartialView} Render "/var/www/charityhack2012/plugins/sfDoctrineGuardPlugin/modules/sfGuardAuth/templates/_signin_form.php"
+Nov 03 18:17:36 symfony [info] {sfPHPView} Decorate content with "/var/www/charityhack2012/apps/frontend/templates/layout.php"
+Nov 03 18:17:36 symfony [info] {sfPHPView} Render "/var/www/charityhack2012/apps/frontend/templates/layout.php"
+Nov 03 18:17:36 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Nov 03 18:17:36 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Nov 03 18:17:36 symfony [info] {sfWebDebugLogger} Configuration 2.23 ms (9)
+Nov 03 18:17:36 symfony [info] {sfWebDebugLogger} Factories 8.25 ms (1)
+Nov 03 18:17:36 symfony [info] {sfWebDebugLogger} Action "sfGuardAuth/signin" 22.75 ms (1)
+Nov 03 18:17:36 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.03 ms (2)
+Nov 03 18:17:36 symfony [info] {sfWebDebugLogger} View "Success" for "sfGuardAuth/signin" 7.96 ms (1)
+Nov 03 18:17:36 symfony [info] {sfWebDebugLogger} Partial "sfGuardAuth/_signin_form" 3.11 ms (1)
+Nov 03 18:17:36 symfony [info] {sfWebResponse} Send content (38064 o)
+Nov 03 18:17:40 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Nov 03 18:17:40 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Nov 03 18:17:40 symfony [info] {sfPatternRouting} Match route "sf_guard_signin" (/login) for /login with parameters array (  'module' => 'sfGuardAuth',  'action' => 'signin',)
+Nov 03 18:17:40 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Nov 03 18:17:40 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Nov 03 18:17:40 symfony [info] {sfGuardAuthActions} Call "sfGuardAuthActions->executeSignin()"
+Nov 03 18:17:40 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Nov 03 18:17:40 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.username = ? AND s.is_active = ?) - (phpchap@gmail.com, 1)
+Nov 03 18:17:40 symfony [info] {sfPHPView} Render "/var/www/charityhack2012/plugins/sfDoctrineGuardPlugin/modules/sfGuardAuth/templates/signinSuccess.php"
+Nov 03 18:17:40 symfony [info] {sfPartialView} Render "/var/www/charityhack2012/plugins/sfDoctrineGuardPlugin/modules/sfGuardAuth/templates/_signin_form.php"
+Nov 03 18:17:40 symfony [info] {sfPHPView} Decorate content with "/var/www/charityhack2012/apps/frontend/templates/layout.php"
+Nov 03 18:17:40 symfony [info] {sfPHPView} Render "/var/www/charityhack2012/apps/frontend/templates/layout.php"
+Nov 03 18:17:40 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Nov 03 18:17:40 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Nov 03 18:17:40 symfony [info] {sfWebDebugLogger} Configuration 1.64 ms (9)
+Nov 03 18:17:40 symfony [info] {sfWebDebugLogger} Factories 8.53 ms (1)
+Nov 03 18:17:40 symfony [info] {sfWebDebugLogger} Action "sfGuardAuth/signin" 19.72 ms (1)
+Nov 03 18:17:40 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.03 ms (2)
+Nov 03 18:17:40 symfony [info] {sfWebDebugLogger} View "Success" for "sfGuardAuth/signin" 7.50 ms (1)
+Nov 03 18:17:40 symfony [info] {sfWebDebugLogger} Partial "sfGuardAuth/_signin_form" 3.02 ms (1)
+Nov 03 18:17:40 symfony [info] {sfWebResponse} Send content (38064 o)
+Nov 03 18:17:56 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Nov 03 18:17:56 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Nov 03 18:17:56 symfony [info] {sfPatternRouting} Match route "registration" (/registration) for /registration with parameters array (  'module' => 'registration',  'action' => 'index',)
+Nov 03 18:17:56 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Nov 03 18:17:56 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Nov 03 18:17:56 symfony [info] {registrationActions} Call "registrationActions->executeIndex()"
+Nov 03 18:17:56 symfony [info] {sfPHPView} Render "/var/www/charityhack2012/apps/frontend/modules/registration/templates/indexSuccess.php"
+Nov 03 18:17:56 symfony [info] {sfPHPView} Decorate content with "/var/www/charityhack2012/apps/frontend/templates/layout.php"
+Nov 03 18:17:56 symfony [info] {sfPHPView} Render "/var/www/charityhack2012/apps/frontend/templates/layout.php"
+Nov 03 18:17:56 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Nov 03 18:17:56 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Nov 03 18:17:56 symfony [info] {sfWebDebugLogger} Configuration 7.43 ms (10)
+Nov 03 18:17:56 symfony [info] {sfWebDebugLogger} Factories 9.04 ms (1)
+Nov 03 18:17:56 symfony [info] {sfWebDebugLogger} Action "registration/index" 22.85 ms (1)
+Nov 03 18:17:56 symfony [info] {sfWebDebugLogger} View "Success" for "registration/index" 13.47 ms (1)
+Nov 03 18:17:56 symfony [info] {sfWebResponse} Send content (31688 o)
+Nov 03 18:18:08 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Nov 03 18:18:08 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Nov 03 18:18:08 symfony [info] {sfPatternRouting} Match route "registration" (/registration) for /registration with parameters array (  'module' => 'registration',  'action' => 'index',)
+Nov 03 18:18:08 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Nov 03 18:18:08 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Nov 03 18:18:08 symfony [info] {registrationActions} Call "registrationActions->executeIndex()"
+Nov 03 18:18:08 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Nov 03 18:18:08 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.email_address AS s__email_address FROM sf_guard_user s WHERE (s.email_address = ?) - (phpchap@gmail.com)
+Nov 03 18:18:08 symfony [info] {Doctrine_Connection_Statement} execute : SELECT u.id AS u__id, u.github_username AS u__github_username FROM user_detail u WHERE (u.github_username = ?) - (phpchap)
+Nov 03 18:18:08 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO sf_guard_user (algorithm, is_active, is_super_admin, email_address, salt, password, id, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) - (sha1, 1, 0, phpchap@gmail.com, c2b7f5b4cd63ef910f1cbde34e197eaf, 0c38786690c929a3b10db711e2c460991e6f9792, , 2012-11-03 18:18:08, 2012-11-03 18:18:08)
+Nov 03 18:18:09 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO user_detail (github_username, id, user_id) VALUES (?, ?, ?) - (phpchap, , 2)
+Nov 03 18:18:09 symfony [info] {myUser} User is authenticated
+Nov 03 18:18:09 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.name AS s__name, s.description AS s__description, s.created_at AS s__created_at, s.updated_at AS s__updated_at, s2.user_id AS s2__user_id, s2.permission_id AS s2__permission_id, s2.created_at AS s2__created_at, s2.updated_at AS s2__updated_at FROM sf_guard_permission s LEFT JOIN sf_guard_user_permission s2 ON s.id = s2.permission_id WHERE (s2.user_id IN (?)) - (2)
+Nov 03 18:18:09 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.name AS s__name, s.description AS s__description, s.created_at AS s__created_at, s.updated_at AS s__updated_at, s2.user_id AS s2__user_id, s2.group_id AS s2__group_id, s2.created_at AS s2__created_at, s2.updated_at AS s2__updated_at FROM sf_guard_group s LEFT JOIN sf_guard_user_group s2 ON s.id = s2.group_id WHERE (s2.user_id IN (?)) - (2)
+Nov 03 18:18:09 symfony [info] {myUser} Add credential(s) ""
+Nov 03 18:18:09 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (2)
+Nov 03 18:18:09 symfony [info] {Doctrine_Connection_Statement} execute : UPDATE sf_guard_user SET last_login = ?, updated_at = ? WHERE id = ? - (2012-11-03 18:18:09, 2012-11-03 18:18:09, 2)
+Nov 03 18:18:09 symfony [info] {sfFrontWebController} Redirect to "http://charityhack.anotherwebdeveloper.com/frontend_dev.php/user_repos"
+Nov 03 18:18:09 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+Nov 03 18:18:09 symfony [info] {sfWebResponse} Send header "Location: http://charityhack.anotherwebdeveloper.com/frontend_dev.php/user_repos"
+Nov 03 18:18:09 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Nov 03 18:18:09 symfony [info] {sfWebDebugLogger} Configuration 2.43 ms (8)
+Nov 03 18:18:09 symfony [info] {sfWebDebugLogger} Factories 12.86 ms (1)
+Nov 03 18:18:09 symfony [info] {sfWebDebugLogger} Action "registration/index" 265.26 ms (1)
+Nov 03 18:18:09 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.15 ms (9)
+Nov 03 18:18:09 symfony [info] {sfWebResponse} Send content (141 o)
+Nov 03 18:18:09 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Nov 03 18:18:09 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Nov 03 18:18:09 symfony [info] {sfPatternRouting} Match route "list_user_repo" (/user_repos) for /user_repos with parameters array (  'module' => 'registration',  'action' => 'listUserRepo',)
+Nov 03 18:18:09 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Nov 03 18:18:09 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Nov 03 18:18:09 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Nov 03 18:18:09 symfony [info] {registrationActions} Call "registrationActions->executeListUserRepo()"
+Nov 03 18:18:09 symfony [info] {sfPHPView} Render "/var/www/charityhack2012/apps/frontend/modules/registration/templates/listUserRepoSuccess.php"
+Nov 03 18:18:09 symfony [info] {sfPHPView} Decorate content with "/var/www/charityhack2012/apps/frontend/templates/layout.php"
+Nov 03 18:18:09 symfony [info] {sfPHPView} Render "/var/www/charityhack2012/apps/frontend/templates/layout.php"
+Nov 03 18:18:09 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Nov 03 18:18:09 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Nov 03 18:18:09 symfony [info] {sfWebDebugLogger} Configuration 2.64 ms (9)
+Nov 03 18:18:09 symfony [info] {sfWebDebugLogger} Factories 10.48 ms (1)
+Nov 03 18:18:09 symfony [info] {sfWebDebugLogger} Action "registration/listUserRepo" 757.11 ms (1)
+Nov 03 18:18:09 symfony [info] {sfWebDebugLogger} View "Success" for "registration/listUserRepo" 15.27 ms (1)
+Nov 03 18:18:10 symfony [info] {sfWebResponse} Send content (36836 o)
+Nov 03 18:20:55 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Nov 03 18:20:55 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Nov 03 18:20:55 symfony [info] {sfPatternRouting} Match route "list_user_repo" (/user_repos) for /user_repos with parameters array (  'module' => 'registration',  'action' => 'listUserRepo',)
+Nov 03 18:20:55 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Nov 03 18:20:55 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Nov 03 18:20:55 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Nov 03 18:20:55 symfony [info] {registrationActions} Call "registrationActions->executeListUserRepo()"
+Nov 03 18:20:56 symfony [info] {sfPHPView} Render "/var/www/charityhack2012/apps/frontend/modules/registration/templates/listUserRepoSuccess.php"
+Nov 03 18:20:56 symfony [info] {sfPHPView} Decorate content with "/var/www/charityhack2012/apps/frontend/templates/layout.php"
+Nov 03 18:20:56 symfony [info] {sfPHPView} Render "/var/www/charityhack2012/apps/frontend/templates/layout.php"
+Nov 03 18:20:56 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Nov 03 18:20:56 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Nov 03 18:20:56 symfony [info] {sfWebDebugLogger} Configuration 2.60 ms (9)
+Nov 03 18:20:56 symfony [info] {sfWebDebugLogger} Factories 15.67 ms (1)
+Nov 03 18:20:56 symfony [info] {sfWebDebugLogger} Action "registration/listUserRepo" 735.25 ms (1)
+Nov 03 18:20:56 symfony [info] {sfWebDebugLogger} View "Success" for "registration/listUserRepo" 10.13 ms (1)
+Nov 03 18:20:56 symfony [info] {sfWebResponse} Send content (37039 o)
+Nov 03 18:21:18 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Nov 03 18:21:18 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Nov 03 18:21:18 symfony [info] {sfPatternRouting} Match route "list_user_repo" (/user_repos) for /user_repos with parameters array (  'module' => 'registration',  'action' => 'listUserRepo',)
+Nov 03 18:21:18 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Nov 03 18:21:18 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Nov 03 18:21:18 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Nov 03 18:21:18 symfony [info] {registrationActions} Call "registrationActions->executeListUserRepo()"
+Nov 03 18:22:06 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Nov 03 18:22:06 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Nov 03 18:22:06 symfony [info] {sfPatternRouting} Match route "list_user_repo" (/user_repos) for /user_repos with parameters array (  'module' => 'registration',  'action' => 'listUserRepo',)
+Nov 03 18:22:06 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Nov 03 18:22:06 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Nov 03 18:22:06 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Nov 03 18:22:06 symfony [info] {registrationActions} Call "registrationActions->executeListUserRepo()"
+Nov 03 18:22:17 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Nov 03 18:22:17 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Nov 03 18:22:17 symfony [info] {sfPatternRouting} Match route "list_user_repo" (/user_repos) for /user_repos with parameters array (  'module' => 'registration',  'action' => 'listUserRepo',)
+Nov 03 18:22:17 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Nov 03 18:22:17 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Nov 03 18:22:17 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Nov 03 18:22:17 symfony [info] {registrationActions} Call "registrationActions->executeListUserRepo()"
+Nov 03 18:23:42 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Nov 03 18:23:42 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Nov 03 18:23:42 symfony [info] {sfPatternRouting} Match route "list_user_repo" (/user_repos) for /user_repos with parameters array (  'module' => 'registration',  'action' => 'listUserRepo',)
+Nov 03 18:23:42 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Nov 03 18:23:42 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Nov 03 18:23:42 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Nov 03 18:23:42 symfony [info] {registrationActions} Call "registrationActions->executeListUserRepo()"
+Nov 03 18:23:50 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Nov 03 18:23:50 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Nov 03 18:23:50 symfony [info] {sfPatternRouting} Match route "list_user_repo" (/user_repos) for /user_repos with parameters array (  'module' => 'registration',  'action' => 'listUserRepo',)
+Nov 03 18:23:51 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Nov 03 18:23:51 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Nov 03 18:23:51 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Nov 03 18:23:51 symfony [info] {registrationActions} Call "registrationActions->executeListUserRepo()"
+Nov 03 18:23:51 symfony [info] {sfPHPView} Render "/var/www/charityhack2012/apps/frontend/modules/registration/templates/listUserRepoSuccess.php"
+Nov 03 18:23:51 symfony [info] {sfPHPView} Decorate content with "/var/www/charityhack2012/apps/frontend/templates/layout.php"
+Nov 03 18:23:51 symfony [info] {sfPHPView} Render "/var/www/charityhack2012/apps/frontend/templates/layout.php"
+Nov 03 18:23:51 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Nov 03 18:23:51 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Nov 03 18:23:51 symfony [info] {sfWebDebugLogger} Configuration 1.87 ms (9)
+Nov 03 18:23:51 symfony [info] {sfWebDebugLogger} Factories 9.29 ms (1)
+Nov 03 18:23:51 symfony [info] {sfWebDebugLogger} Action "registration/listUserRepo" 762.46 ms (1)
+Nov 03 18:23:51 symfony [info] {sfWebDebugLogger} View "Success" for "registration/listUserRepo" 13.79 ms (1)
+Nov 03 18:23:51 symfony [info] {sfWebResponse} Send content (36734 o)
+Nov 03 18:23:59 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Nov 03 18:23:59 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Nov 03 18:23:59 symfony [info] {sfPatternRouting} Match route "sf_guard_signout" (/logout) for /logout with parameters array (  'module' => 'sfGuardAuth',  'action' => 'signout',)
+Nov 03 18:23:59 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Nov 03 18:23:59 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Nov 03 18:23:59 symfony [info] {sfGuardAuthActions} Call "sfGuardAuthActions->executeSignout()"
+Nov 03 18:23:59 symfony [info] {myUser} User is not authenticated
+Nov 03 18:23:59 symfony [info] {sfFrontWebController} Redirect to "http://charityhack.anotherwebdeveloper.com/frontend_dev.php/"
+Nov 03 18:23:59 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+Nov 03 18:23:59 symfony [info] {sfWebResponse} Send header "Location: http://charityhack.anotherwebdeveloper.com/frontend_dev.php/"
+Nov 03 18:23:59 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Nov 03 18:23:59 symfony [info] {sfWebResponse} Send cookie "sfRemember": ""
+Nov 03 18:23:59 symfony [info] {sfWebDebugLogger} Configuration 1.50 ms (8)
+Nov 03 18:23:59 symfony [info] {sfWebDebugLogger} Factories 8.81 ms (1)
+Nov 03 18:23:59 symfony [info] {sfWebDebugLogger} Action "sfGuardAuth/signout" 2.11 ms (1)
+Nov 03 18:23:59 symfony [info] {sfWebResponse} Send content (131 o)
+Nov 03 18:23:59 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Nov 03 18:23:59 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Nov 03 18:23:59 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'home',  'action' => 'index',)
+Nov 03 18:23:59 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Nov 03 18:23:59 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Nov 03 18:23:59 symfony [info] {homeActions} Call "homeActions->executeIndex()"
+Nov 03 18:23:59 symfony [info] {sfPHPView} Render "/var/www/charityhack2012/apps/frontend/modules/home/templates/indexSuccess.php"
+Nov 03 18:23:59 symfony [info] {sfPHPView} Decorate content with "/var/www/charityhack2012/apps/frontend/templates/layout.php"
+Nov 03 18:23:59 symfony [info] {sfPHPView} Render "/var/www/charityhack2012/apps/frontend/templates/layout.php"
+Nov 03 18:23:59 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Nov 03 18:23:59 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Nov 03 18:23:59 symfony [info] {sfWebDebugLogger} Configuration 17.26 ms (10)
+Nov 03 18:23:59 symfony [info] {sfWebDebugLogger} Factories 7.74 ms (1)
+Nov 03 18:23:59 symfony [info] {sfWebDebugLogger} Action "home/index" 0.20 ms (1)
+Nov 03 18:23:59 symfony [info] {sfWebDebugLogger} View "Success" for "home/index" 9.06 ms (1)
+Nov 03 18:23:59 symfony [info] {sfWebResponse} Send content (28262 o)
+Nov 03 18:24:04 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Nov 03 18:24:04 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Nov 03 18:24:04 symfony [info] {sfPatternRouting} Match route "registration" (/registration) for /registration with parameters array (  'module' => 'registration',  'action' => 'index',)
+Nov 03 18:24:04 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Nov 03 18:24:04 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Nov 03 18:24:04 symfony [info] {registrationActions} Call "registrationActions->executeIndex()"
+Nov 03 18:24:04 symfony [info] {sfPHPView} Render "/var/www/charityhack2012/apps/frontend/modules/registration/templates/indexSuccess.php"
+Nov 03 18:24:04 symfony [info] {sfPHPView} Decorate content with "/var/www/charityhack2012/apps/frontend/templates/layout.php"
+Nov 03 18:24:04 symfony [info] {sfPHPView} Render "/var/www/charityhack2012/apps/frontend/templates/layout.php"
+Nov 03 18:24:04 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Nov 03 18:24:04 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Nov 03 18:24:04 symfony [info] {sfWebDebugLogger} Configuration 2.49 ms (9)
+Nov 03 18:24:04 symfony [info] {sfWebDebugLogger} Factories 9.74 ms (1)
+Nov 03 18:24:04 symfony [info] {sfWebDebugLogger} Action "registration/index" 23.60 ms (1)
+Nov 03 18:24:04 symfony [info] {sfWebDebugLogger} View "Success" for "registration/index" 9.36 ms (1)
+Nov 03 18:24:04 symfony [info] {sfWebResponse} Send content (31733 o)
+Nov 03 18:24:16 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Nov 03 18:24:16 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Nov 03 18:24:16 symfony [info] {sfPatternRouting} Match route "registration" (/registration) for /registration with parameters array (  'module' => 'registration',  'action' => 'index',)
+Nov 03 18:24:16 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Nov 03 18:24:16 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Nov 03 18:24:16 symfony [info] {registrationActions} Call "registrationActions->executeIndex()"
+Nov 03 18:24:16 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Nov 03 18:24:16 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.email_address AS s__email_address FROM sf_guard_user s WHERE (s.email_address = ?) - (phpchap@gmail.com)
+Nov 03 18:24:16 symfony [info] {Doctrine_Connection_Statement} execute : SELECT u.id AS u__id, u.github_username AS u__github_username FROM user_detail u WHERE (u.github_username = ?) - (phpchap)
+Nov 03 18:24:16 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO sf_guard_user (algorithm, is_active, is_super_admin, email_address, salt, password, id, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) - (sha1, 1, 0, phpchap@gmail.com, 8ca1ca581f9b33bcc4dfe9689ad4bda3, 5f3f4efaeae5e32393772a1f6cf2ffa4a6922cbc, , 2012-11-03 18:24:16, 2012-11-03 18:24:16)
+Nov 03 18:24:16 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO user_detail (github_username, id, user_id) VALUES (?, ?, ?) - (phpchap, , 2)
+Nov 03 18:24:16 symfony [info] {myUser} User is authenticated
+Nov 03 18:24:16 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.name AS s__name, s.description AS s__description, s.created_at AS s__created_at, s.updated_at AS s__updated_at, s2.user_id AS s2__user_id, s2.permission_id AS s2__permission_id, s2.created_at AS s2__created_at, s2.updated_at AS s2__updated_at FROM sf_guard_permission s LEFT JOIN sf_guard_user_permission s2 ON s.id = s2.permission_id WHERE (s2.user_id IN (?)) - (2)
+Nov 03 18:24:16 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.name AS s__name, s.description AS s__description, s.created_at AS s__created_at, s.updated_at AS s__updated_at, s2.user_id AS s2__user_id, s2.group_id AS s2__group_id, s2.created_at AS s2__created_at, s2.updated_at AS s2__updated_at FROM sf_guard_group s LEFT JOIN sf_guard_user_group s2 ON s.id = s2.group_id WHERE (s2.user_id IN (?)) - (2)
+Nov 03 18:24:16 symfony [info] {myUser} Add credential(s) ""
+Nov 03 18:24:16 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (2)
+Nov 03 18:24:16 symfony [info] {Doctrine_Connection_Statement} execute : UPDATE sf_guard_user SET last_login = ? WHERE id = ? - (2012-11-03 18:24:16, 2)
+Nov 03 18:24:17 symfony [info] {sfFrontWebController} Redirect to "http://charityhack.anotherwebdeveloper.com/frontend_dev.php/user_repos"
+Nov 03 18:24:17 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+Nov 03 18:24:17 symfony [info] {sfWebResponse} Send header "Location: http://charityhack.anotherwebdeveloper.com/frontend_dev.php/user_repos"
+Nov 03 18:24:17 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Nov 03 18:24:17 symfony [info] {sfWebDebugLogger} Configuration 2.43 ms (8)
+Nov 03 18:24:17 symfony [info] {sfWebDebugLogger} Factories 12.92 ms (1)
+Nov 03 18:24:17 symfony [info] {sfWebDebugLogger} Action "registration/index" 278.00 ms (1)
+Nov 03 18:24:17 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.13 ms (9)
+Nov 03 18:24:17 symfony [info] {sfWebResponse} Send content (141 o)
+Nov 03 18:24:17 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Nov 03 18:24:17 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Nov 03 18:24:17 symfony [info] {sfPatternRouting} Match route "list_user_repo" (/user_repos) for /user_repos with parameters array (  'module' => 'registration',  'action' => 'listUserRepo',)
+Nov 03 18:24:17 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Nov 03 18:24:17 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Nov 03 18:24:17 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Nov 03 18:24:17 symfony [info] {registrationActions} Call "registrationActions->executeListUserRepo()"
+Nov 03 18:24:17 symfony [info] {sfPHPView} Render "/var/www/charityhack2012/apps/frontend/modules/registration/templates/listUserRepoSuccess.php"
+Nov 03 18:24:17 symfony [info] {sfPHPView} Decorate content with "/var/www/charityhack2012/apps/frontend/templates/layout.php"
+Nov 03 18:24:17 symfony [info] {sfPHPView} Render "/var/www/charityhack2012/apps/frontend/templates/layout.php"
+Nov 03 18:24:17 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Nov 03 18:24:17 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Nov 03 18:24:17 symfony [info] {sfWebDebugLogger} Configuration 2.10 ms (9)
+Nov 03 18:24:17 symfony [info] {sfWebDebugLogger} Factories 8.22 ms (1)
+Nov 03 18:24:17 symfony [info] {sfWebDebugLogger} Action "registration/listUserRepo" 731.76 ms (1)
+Nov 03 18:24:17 symfony [info] {sfWebDebugLogger} View "Success" for "registration/listUserRepo" 14.95 ms (1)
+Nov 03 18:24:17 symfony [info] {sfWebResponse} Send content (36835 o)
+Nov 03 18:24:25 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Nov 03 18:24:25 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Nov 03 18:24:25 symfony [info] {sfPatternRouting} Match route "list_user_repo" (/user_repos) for /user_repos with parameters array (  'module' => 'registration',  'action' => 'listUserRepo',)
+Nov 03 18:24:25 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Nov 03 18:24:25 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Nov 03 18:24:25 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Nov 03 18:24:25 symfony [info] {registrationActions} Call "registrationActions->executeListUserRepo()"
+Nov 03 18:26:43 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Nov 03 18:26:43 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Nov 03 18:26:43 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'home',  'action' => 'index',)
+Nov 03 18:26:43 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Nov 03 18:26:43 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Nov 03 18:26:43 symfony [info] {homeActions} Call "homeActions->executeIndex()"
+Nov 03 18:26:43 symfony [info] {sfPHPView} Render "/var/www/charityhack2012/apps/frontend/modules/home/templates/indexSuccess.php"
+Nov 03 18:26:43 symfony [info] {sfPHPView} Decorate content with "/var/www/charityhack2012/apps/frontend/templates/layout.php"
+Nov 03 18:26:43 symfony [info] {sfPHPView} Render "/var/www/charityhack2012/apps/frontend/templates/layout.php"
+Nov 03 18:26:43 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Nov 03 18:26:43 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Nov 03 18:26:43 symfony [info] {sfWebDebugLogger} Configuration 1.72 ms (9)
+Nov 03 18:26:43 symfony [info] {sfWebDebugLogger} Factories 9.60 ms (1)
+Nov 03 18:26:43 symfony [info] {sfWebDebugLogger} Action "home/index" 0.18 ms (1)
+Nov 03 18:26:43 symfony [info] {sfWebDebugLogger} View "Success" for "home/index" 4.26 ms (1)
+Nov 03 18:26:43 symfony [info] {sfWebResponse} Send content (28287 o)
+Nov 03 18:26:45 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Nov 03 18:26:45 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Nov 03 18:26:45 symfony [info] {sfPatternRouting} Match route "registration" (/registration) for /registration with parameters array (  'module' => 'registration',  'action' => 'index',)
+Nov 03 18:26:45 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Nov 03 18:26:45 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Nov 03 18:26:45 symfony [err] {sfException} Call to undefined method myUser::getId.
+Nov 03 18:26:45 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Nov 03 18:26:45 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Nov 03 18:26:45 symfony [info] {sfWebDebugLogger} Configuration 2.36 ms (8)
+Nov 03 18:26:45 symfony [info] {sfWebDebugLogger} Factories 11.34 ms (1)
+Nov 03 18:26:45 symfony [info] {sfWebDebugLogger} Action "registration/index" 28.49 ms (1)
+Nov 03 18:26:59 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Nov 03 18:26:59 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Nov 03 18:26:59 symfony [info] {sfPatternRouting} Match route "registration" (/registration) for /registration with parameters array (  'module' => 'registration',  'action' => 'index',)
+Nov 03 18:26:59 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Nov 03 18:26:59 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Nov 03 18:26:59 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Nov 03 18:26:59 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (2)
+Nov 03 18:26:59 symfony [info] {registrationActions} Call "registrationActions->executeIndex()"
+Nov 03 18:26:59 symfony [info] {sfPHPView} Render "/var/www/charityhack2012/apps/frontend/modules/registration/templates/indexSuccess.php"
+Nov 03 18:26:59 symfony [info] {sfPHPView} Decorate content with "/var/www/charityhack2012/apps/frontend/templates/layout.php"
+Nov 03 18:26:59 symfony [info] {sfPHPView} Render "/var/www/charityhack2012/apps/frontend/templates/layout.php"
+Nov 03 18:26:59 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Nov 03 18:26:59 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Nov 03 18:26:59 symfony [info] {sfWebDebugLogger} Configuration 1.76 ms (9)
+Nov 03 18:26:59 symfony [info] {sfWebDebugLogger} Factories 9.24 ms (1)
+Nov 03 18:26:59 symfony [info] {sfWebDebugLogger} Action "registration/index" 34.50 ms (1)
+Nov 03 18:26:59 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.02 ms (2)
+Nov 03 18:26:59 symfony [info] {sfWebDebugLogger} View "Success" for "registration/index" 8.02 ms (1)
+Nov 03 18:26:59 symfony [info] {sfWebResponse} Send content (36323 o)
+Nov 03 18:27:10 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Nov 03 18:27:10 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Nov 03 18:27:10 symfony [info] {sfPatternRouting} Match route "registration" (/registration) for /registration with parameters array (  'module' => 'registration',  'action' => 'index',)
+Nov 03 18:27:10 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Nov 03 18:27:10 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Nov 03 18:27:10 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Nov 03 18:27:10 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (2)
+Nov 03 18:27:10 symfony [info] {registrationActions} Call "registrationActions->executeIndex()"
+Nov 03 18:27:10 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.email_address AS s__email_address FROM sf_guard_user s WHERE (s.email_address = ?) - (phpchap@gmail.com)
+Nov 03 18:27:10 symfony [info] {sfPHPView} Render "/var/www/charityhack2012/apps/frontend/modules/registration/templates/indexSuccess.php"
+Nov 03 18:27:10 symfony [info] {sfPHPView} Decorate content with "/var/www/charityhack2012/apps/frontend/templates/layout.php"
+Nov 03 18:27:10 symfony [info] {sfPHPView} Render "/var/www/charityhack2012/apps/frontend/templates/layout.php"
+Nov 03 18:27:10 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Nov 03 18:27:10 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Nov 03 18:27:10 symfony [info] {sfWebDebugLogger} Configuration 2.40 ms (9)
+Nov 03 18:27:10 symfony [info] {sfWebDebugLogger} Factories 13.74 ms (1)
+Nov 03 18:27:10 symfony [info] {sfWebDebugLogger} Action "registration/index" 67.12 ms (1)
+Nov 03 18:27:10 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.05 ms (3)
+Nov 03 18:27:10 symfony [info] {sfWebDebugLogger} View "Success" for "registration/index" 9.15 ms (1)
+Nov 03 18:27:10 symfony [info] {sfWebResponse} Send content (38282 o)
+Nov 03 18:32:54 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Nov 03 18:32:54 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Nov 03 18:32:54 symfony [err] {sfError404Exception} Empty module and/or action after parsing the URL "/user_repos" (/).
+Nov 03 18:32:54 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Nov 03 18:32:54 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Nov 03 18:32:54 symfony [info] {sfWebDebugLogger} Configuration 59.14 ms (6)
+Nov 03 18:32:54 symfony [info] {sfWebDebugLogger} Factories 65.99 ms (1)
+Nov 03 18:33:22 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Nov 03 18:33:22 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Nov 03 18:33:22 symfony [info] {sfPatternRouting} Match route "list_user_repo" (/user_repos) for /user_repos with parameters array (  'module' => 'registration',  'action' => 'listUserRepo',)
+Nov 03 18:33:22 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Nov 03 18:33:22 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Nov 03 18:33:22 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Nov 03 18:33:22 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Nov 03 18:33:22 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (2)
+Nov 03 18:33:22 symfony [info] {registrationActions} Call "registrationActions->executeListUserRepo()"
+Nov 03 18:33:23 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO user_repo (name, user_id) VALUES (?, ?) - (BuddyPress-REST, 2)
+Nov 03 18:33:23 symfony [err] {Doctrine_Connection_Mysql_Exception} SQLSTATE[42S22]: Column not found: 1054 Unknown column 'name' in 'field list'
+Nov 03 18:33:23 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Nov 03 18:33:23 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Nov 03 18:33:23 symfony [info] {sfWebDebugLogger} Configuration 82.73 ms (9)
+Nov 03 18:33:23 symfony [info] {sfWebDebugLogger} Factories 93.07 ms (1)
+Nov 03 18:33:23 symfony [info] {sfWebDebugLogger} Action "registration/listUserRepo" 884.43 ms (1)
+Nov 03 18:33:23 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+Nov 03 18:34:06 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Nov 03 18:34:06 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Nov 03 18:34:06 symfony [info] {sfPatternRouting} Match route "list_user_repo" (/user_repos) for /user_repos with parameters array (  'module' => 'registration',  'action' => 'listUserRepo',)
+Nov 03 18:34:06 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Nov 03 18:34:06 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Nov 03 18:34:06 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Nov 03 18:34:06 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Nov 03 18:34:06 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (2)
+Nov 03 18:34:06 symfony [info] {registrationActions} Call "registrationActions->executeListUserRepo()"
+Nov 03 18:34:08 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO user_repo (name, user_id) VALUES (?, ?) - (BuddyPress-REST, 2)
+Nov 03 18:34:08 symfony [err] {Doctrine_Connection_Mysql_Exception} SQLSTATE[42S22]: Column not found: 1054 Unknown column 'name' in 'field list'
+Nov 03 18:34:08 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Nov 03 18:34:08 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Nov 03 18:34:08 symfony [info] {sfWebDebugLogger} Configuration 1.47 ms (8)
+Nov 03 18:34:08 symfony [info] {sfWebDebugLogger} Factories 8.81 ms (1)
+Nov 03 18:34:08 symfony [info] {sfWebDebugLogger} Action "registration/listUserRepo" 1818.10 ms (1)
+Nov 03 18:34:08 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.02 ms (2)
+Nov 03 18:34:51 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Nov 03 18:34:51 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Nov 03 18:34:51 symfony [info] {sfPatternRouting} Match route "list_user_repo" (/user_repos) for /user_repos with parameters array (  'module' => 'registration',  'action' => 'listUserRepo',)
+Nov 03 18:34:51 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Nov 03 18:34:51 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Nov 03 18:34:51 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Nov 03 18:34:51 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Nov 03 18:34:51 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (2)
+Nov 03 18:34:51 symfony [info] {registrationActions} Call "registrationActions->executeListUserRepo()"
+Nov 03 18:35:18 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Nov 03 18:35:18 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Nov 03 18:35:18 symfony [info] {sfPatternRouting} Match route "list_user_repo" (/user_repos) for /user_repos with parameters array (  'module' => 'registration',  'action' => 'listUserRepo',)
+Nov 03 18:35:18 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Nov 03 18:35:18 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Nov 03 18:35:18 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Nov 03 18:35:18 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Nov 03 18:35:18 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (2)
+Nov 03 18:35:18 symfony [info] {registrationActions} Call "registrationActions->executeListUserRepo()"
+Nov 03 18:35:19 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO user_repo (name, user_id) VALUES (?, ?) - (BuddyPress-REST, 2)
+Nov 03 18:35:19 symfony [err] {Doctrine_Connection_Mysql_Exception} SQLSTATE[42S22]: Column not found: 1054 Unknown column 'name' in 'field list'
+Nov 03 18:35:19 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Nov 03 18:35:19 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Nov 03 18:35:19 symfony [info] {sfWebDebugLogger} Configuration 1.43 ms (8)
+Nov 03 18:35:19 symfony [info] {sfWebDebugLogger} Factories 9.63 ms (1)
+Nov 03 18:35:19 symfony [info] {sfWebDebugLogger} Action "registration/listUserRepo" 898.19 ms (1)
+Nov 03 18:35:19 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+Nov 03 18:36:14 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Nov 03 18:36:14 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Nov 03 18:36:14 symfony [info] {sfPatternRouting} Match route "list_user_repo" (/user_repos) for /user_repos with parameters array (  'module' => 'registration',  'action' => 'listUserRepo',)
+Nov 03 18:36:14 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Nov 03 18:36:14 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Nov 03 18:36:14 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Nov 03 18:36:14 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Nov 03 18:36:14 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (2)
+Nov 03 18:36:14 symfony [info] {registrationActions} Call "registrationActions->executeListUserRepo()"
+Nov 03 18:36:15 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO user_repo (name, user_id) VALUES (?, ?) - (BuddyPress-REST, 2)
+Nov 03 18:36:15 symfony [err] {Doctrine_Connection_Mysql_Exception} SQLSTATE[42S22]: Column not found: 1054 Unknown column 'name' in 'field list'
+Nov 03 18:36:15 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Nov 03 18:36:15 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Nov 03 18:36:15 symfony [info] {sfWebDebugLogger} Configuration 169.78 ms (8)
+Nov 03 18:36:15 symfony [info] {sfWebDebugLogger} Factories 116.77 ms (1)
+Nov 03 18:36:15 symfony [info] {sfWebDebugLogger} Action "registration/listUserRepo" 1154.25 ms (1)
+Nov 03 18:36:15 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.03 ms (2)
+Nov 03 18:37:16 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Nov 03 18:37:16 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Nov 03 18:37:16 symfony [info] {sfPatternRouting} Match route "list_user_repo" (/user_repos) for /user_repos with parameters array (  'module' => 'registration',  'action' => 'listUserRepo',)
+Nov 03 18:37:16 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Nov 03 18:37:16 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Nov 03 18:37:16 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Nov 03 18:37:16 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Nov 03 18:37:16 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (2)
+Nov 03 18:37:16 symfony [info] {registrationActions} Call "registrationActions->executeListUserRepo()"
+Nov 03 18:37:32 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Nov 03 18:37:32 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Nov 03 18:37:32 symfony [info] {sfPatternRouting} Match route "list_user_repo" (/user_repos) for /user_repos with parameters array (  'module' => 'registration',  'action' => 'listUserRepo',)
+Nov 03 18:37:32 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Nov 03 18:37:32 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Nov 03 18:37:32 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Nov 03 18:37:32 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Nov 03 18:37:32 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (2)
+Nov 03 18:37:32 symfony [info] {registrationActions} Call "registrationActions->executeListUserRepo()"
+Nov 03 18:37:47 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Nov 03 18:37:47 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Nov 03 18:37:47 symfony [info] {sfPatternRouting} Match route "list_user_repo" (/user_repos) for /user_repos with parameters array (  'module' => 'registration',  'action' => 'listUserRepo',)
+Nov 03 18:37:47 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Nov 03 18:37:47 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Nov 03 18:37:47 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Nov 03 18:37:47 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Nov 03 18:37:47 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (2)
+Nov 03 18:37:47 symfony [info] {registrationActions} Call "registrationActions->executeListUserRepo()"
+Nov 03 18:37:48 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO user_repo (name, user_id) VALUES (?, ?) - (BuddyPress-REST, 2)
+Nov 03 18:37:48 symfony [err] {Doctrine_Connection_Mysql_Exception} SQLSTATE[42S22]: Column not found: 1054 Unknown column 'name' in 'field list'
+Nov 03 18:37:48 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Nov 03 18:37:48 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Nov 03 18:37:48 symfony [info] {sfWebDebugLogger} Configuration 1.51 ms (8)
+Nov 03 18:37:48 symfony [info] {sfWebDebugLogger} Factories 9.23 ms (1)
+Nov 03 18:37:48 symfony [info] {sfWebDebugLogger} Action "registration/listUserRepo" 765.27 ms (1)
+Nov 03 18:37:48 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.03 ms (2)
+Nov 03 18:38:30 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Nov 03 18:38:30 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Nov 03 18:38:30 symfony [info] {sfPatternRouting} Match route "list_user_repo" (/user_repos) for /user_repos with parameters array (  'module' => 'registration',  'action' => 'listUserRepo',)
+Nov 03 18:38:30 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Nov 03 18:38:30 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Nov 03 18:38:30 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Nov 03 18:38:30 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Nov 03 18:38:30 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (2)
+Nov 03 18:38:30 symfony [info] {myUser} User is not authenticated
+Nov 03 18:38:30 symfony [err] {sfException} The user does not exist anymore in the database.
+Nov 03 18:38:30 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Nov 03 18:38:30 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Nov 03 18:38:30 symfony [info] {sfWebResponse} Send cookie "sfRemember": ""
+Nov 03 18:38:30 symfony [info] {sfWebDebugLogger} Configuration 2.00 ms (8)
+Nov 03 18:38:30 symfony [info] {sfWebDebugLogger} Factories 9.77 ms (1)
+Nov 03 18:38:30 symfony [info] {sfWebDebugLogger} Action "registration/listUserRepo" 48.55 ms (1)
+Nov 03 18:38:30 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.02 ms (2)
+Nov 03 18:39:14 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Nov 03 18:39:14 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Nov 03 18:39:14 symfony [info] {sfPatternRouting} Match route "list_user_repo" (/user_repos) for /user_repos with parameters array (  'module' => 'registration',  'action' => 'listUserRepo',)
+Nov 03 18:39:14 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Nov 03 18:39:14 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Nov 03 18:39:14 symfony [info] {sfBasicSecurityFilter} Action "registration/listUserRepo" requires authentication, forwarding to "sfGuardAuth/signin"
+Nov 03 18:39:14 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Nov 03 18:39:14 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Nov 03 18:39:14 symfony [info] {sfGuardAuthActions} Call "sfGuardAuthActions->executeSignin()"
+Nov 03 18:39:14 symfony [info] {sfPHPView} Render "/var/www/charityhack2012/plugins/sfDoctrineGuardPlugin/modules/sfGuardAuth/templates/signinSuccess.php"
+Nov 03 18:39:14 symfony [info] {sfPartialView} Render "/var/www/charityhack2012/plugins/sfDoctrineGuardPlugin/modules/sfGuardAuth/templates/_signin_form.php"
+Nov 03 18:39:14 symfony [info] {sfPHPView} Decorate content with "/var/www/charityhack2012/apps/frontend/templates/layout.php"
+Nov 03 18:39:14 symfony [info] {sfPHPView} Render "/var/www/charityhack2012/apps/frontend/templates/layout.php"
+Nov 03 18:39:14 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Nov 03 18:39:14 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Nov 03 18:39:14 symfony [info] {sfWebDebugLogger} Configuration 22.70 ms (13)
+Nov 03 18:39:14 symfony [info] {sfWebDebugLogger} Factories 10.17 ms (1)
+Nov 03 18:39:14 symfony [info] {sfWebDebugLogger} Action "sfGuardAuth/signin" 7.14 ms (1)
+Nov 03 18:39:14 symfony [info] {sfWebDebugLogger} View "Success" for "sfGuardAuth/signin" 12.63 ms (1)
+Nov 03 18:39:14 symfony [info] {sfWebDebugLogger} Partial "sfGuardAuth/_signin_form" 3.71 ms (1)
+Nov 03 18:39:14 symfony [info] {sfWebResponse} Send content (35629 o)
+Nov 03 18:39:19 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Nov 03 18:39:19 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Nov 03 18:39:19 symfony [info] {sfPatternRouting} Match route "list_user_repo" (/user_repos) for /user_repos with parameters array (  'module' => 'registration',  'action' => 'listUserRepo',)
+Nov 03 18:39:19 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Nov 03 18:39:19 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Nov 03 18:39:19 symfony [info] {sfBasicSecurityFilter} Action "registration/listUserRepo" requires authentication, forwarding to "sfGuardAuth/signin"
+Nov 03 18:39:19 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Nov 03 18:39:19 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Nov 03 18:39:19 symfony [info] {sfGuardAuthActions} Call "sfGuardAuthActions->executeSignin()"
+Nov 03 18:39:19 symfony [info] {sfPHPView} Render "/var/www/charityhack2012/plugins/sfDoctrineGuardPlugin/modules/sfGuardAuth/templates/signinSuccess.php"
+Nov 03 18:39:19 symfony [info] {sfPartialView} Render "/var/www/charityhack2012/plugins/sfDoctrineGuardPlugin/modules/sfGuardAuth/templates/_signin_form.php"
+Nov 03 18:39:19 symfony [info] {sfPHPView} Decorate content with "/var/www/charityhack2012/apps/frontend/templates/layout.php"
+Nov 03 18:39:19 symfony [info] {sfPHPView} Render "/var/www/charityhack2012/apps/frontend/templates/layout.php"
+Nov 03 18:39:19 symfony [info] {sfWebResponse} Send status "HTTP/1.1 401 Unauthorized"
+Nov 03 18:39:19 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Nov 03 18:39:19 symfony [info] {sfWebDebugLogger} Configuration 3.27 ms (12)
+Nov 03 18:39:19 symfony [info] {sfWebDebugLogger} Factories 12.35 ms (1)
+Nov 03 18:39:19 symfony [info] {sfWebDebugLogger} Action "sfGuardAuth/signin" 3.10 ms (1)
+Nov 03 18:39:19 symfony [info] {sfWebDebugLogger} View "Success" for "sfGuardAuth/signin" 7.66 ms (1)
+Nov 03 18:39:19 symfony [info] {sfWebDebugLogger} Partial "sfGuardAuth/_signin_form" 3.02 ms (1)
+Nov 03 18:39:19 symfony [info] {sfWebResponse} Send content (34510 o)
+Nov 03 18:39:21 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Nov 03 18:39:21 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Nov 03 18:39:21 symfony [info] {sfPatternRouting} Match route "registration" (/registration) for /registration with parameters array (  'module' => 'registration',  'action' => 'index',)
+Nov 03 18:39:21 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Nov 03 18:39:21 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Nov 03 18:39:21 symfony [info] {registrationActions} Call "registrationActions->executeIndex()"
+Nov 03 18:39:21 symfony [info] {sfPHPView} Render "/var/www/charityhack2012/apps/frontend/modules/registration/templates/indexSuccess.php"
+Nov 03 18:39:21 symfony [info] {sfPHPView} Decorate content with "/var/www/charityhack2012/apps/frontend/templates/layout.php"
+Nov 03 18:39:21 symfony [info] {sfPHPView} Render "/var/www/charityhack2012/apps/frontend/templates/layout.php"
+Nov 03 18:39:21 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Nov 03 18:39:21 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Nov 03 18:39:21 symfony [info] {sfWebDebugLogger} Configuration 7.10 ms (10)
+Nov 03 18:39:21 symfony [info] {sfWebDebugLogger} Factories 8.76 ms (1)
+Nov 03 18:39:21 symfony [info] {sfWebDebugLogger} Action "registration/index" 24.13 ms (1)
+Nov 03 18:39:21 symfony [info] {sfWebDebugLogger} View "Success" for "registration/index" 13.69 ms (1)
+Nov 03 18:39:21 symfony [info] {sfWebResponse} Send content (31685 o)
+Nov 03 18:39:30 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Nov 03 18:39:30 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Nov 03 18:39:30 symfony [info] {sfPatternRouting} Match route "registration" (/registration) for /registration with parameters array (  'module' => 'registration',  'action' => 'index',)
+Nov 03 18:39:30 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Nov 03 18:39:30 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Nov 03 18:39:30 symfony [info] {registrationActions} Call "registrationActions->executeIndex()"
+Nov 03 18:39:30 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Nov 03 18:39:30 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.email_address AS s__email_address FROM sf_guard_user s WHERE (s.email_address = ?) - (phpchap@gmail.com)
+Nov 03 18:39:30 symfony [info] {Doctrine_Connection_Statement} execute : SELECT u.id AS u__id, u.github_username AS u__github_username FROM user_detail u WHERE (u.github_username = ?) - (phpchap)
+Nov 03 18:39:30 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO sf_guard_user (algorithm, is_active, is_super_admin, email_address, salt, password, id, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) - (sha1, 1, 0, phpchap@gmail.com, 5edde1c300ae597094a20d50fad08dbf, 9442ec3e10e776f5edf0c0b40ce1584ced3bfb4e, , 2012-11-03 18:39:30, 2012-11-03 18:39:30)
+Nov 03 18:39:30 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO user_detail (github_username, id, user_id) VALUES (?, ?, ?) - (phpchap, , 2)
+Nov 03 18:39:30 symfony [info] {myUser} User is authenticated
+Nov 03 18:39:30 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.name AS s__name, s.description AS s__description, s.created_at AS s__created_at, s.updated_at AS s__updated_at, s2.user_id AS s2__user_id, s2.permission_id AS s2__permission_id, s2.created_at AS s2__created_at, s2.updated_at AS s2__updated_at FROM sf_guard_permission s LEFT JOIN sf_guard_user_permission s2 ON s.id = s2.permission_id WHERE (s2.user_id IN (?)) - (2)
+Nov 03 18:39:30 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.name AS s__name, s.description AS s__description, s.created_at AS s__created_at, s.updated_at AS s__updated_at, s2.user_id AS s2__user_id, s2.group_id AS s2__group_id, s2.created_at AS s2__created_at, s2.updated_at AS s2__updated_at FROM sf_guard_group s LEFT JOIN sf_guard_user_group s2 ON s.id = s2.group_id WHERE (s2.user_id IN (?)) - (2)
+Nov 03 18:39:30 symfony [info] {myUser} Add credential(s) ""
+Nov 03 18:39:30 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (2)
+Nov 03 18:39:30 symfony [info] {Doctrine_Connection_Statement} execute : UPDATE sf_guard_user SET last_login = ? WHERE id = ? - (2012-11-03 18:39:30, 2)
+Nov 03 18:39:30 symfony [info] {sfFrontWebController} Redirect to "http://charityhack.anotherwebdeveloper.com/index.php/user_repos"
+Nov 03 18:39:30 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+Nov 03 18:39:30 symfony [info] {sfWebResponse} Send header "Location: http://charityhack.anotherwebdeveloper.com/index.php/user_repos"
+Nov 03 18:39:30 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Nov 03 18:39:30 symfony [info] {sfWebDebugLogger} Configuration 1.80 ms (8)
+Nov 03 18:39:30 symfony [info] {sfWebDebugLogger} Factories 8.13 ms (1)
+Nov 03 18:39:30 symfony [info] {sfWebDebugLogger} Action "registration/index" 275.37 ms (1)
+Nov 03 18:39:30 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.11 ms (9)
+Nov 03 18:39:30 symfony [info] {sfWebResponse} Send content (134 o)
+Nov 03 18:39:31 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Nov 03 18:39:31 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Nov 03 18:39:31 symfony [info] {sfPatternRouting} Match route "list_user_repo" (/user_repos) for /user_repos with parameters array (  'module' => 'registration',  'action' => 'listUserRepo',)
+Nov 03 18:39:31 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Nov 03 18:39:31 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Nov 03 18:39:31 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Nov 03 18:39:31 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Nov 03 18:39:31 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (2)
+Nov 03 18:39:31 symfony [info] {registrationActions} Call "registrationActions->executeListUserRepo()"
+Nov 03 18:39:37 symfony [info] {sfPHPView} Render "/var/www/charityhack2012/apps/frontend/modules/registration/templates/listUserRepoSuccess.php"
+Nov 03 18:39:37 symfony [info] {sfPHPView} Decorate content with "/var/www/charityhack2012/apps/frontend/templates/layout.php"
+Nov 03 18:39:37 symfony [info] {sfPHPView} Render "/var/www/charityhack2012/apps/frontend/templates/layout.php"
+Nov 03 18:39:37 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Nov 03 18:39:37 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Nov 03 18:39:37 symfony [info] {sfWebDebugLogger} Configuration 2.36 ms (9)
+Nov 03 18:39:37 symfony [info] {sfWebDebugLogger} Factories 11.45 ms (1)
+Nov 03 18:39:37 symfony [info] {sfWebDebugLogger} Action "registration/listUserRepo" 6118.08 ms (1)
+Nov 03 18:39:37 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.03 ms (2)
+Nov 03 18:39:37 symfony [info] {sfWebDebugLogger} View "Success" for "registration/listUserRepo" 11.05 ms (1)
+Nov 03 18:39:37 symfony [info] {sfWebResponse} Send content (35726 o)
+Nov 03 18:39:49 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Nov 03 18:39:49 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Nov 03 18:39:49 symfony [info] {sfPatternRouting} Match route "list_user_repo" (/user_repos) for /user_repos with parameters array (  'module' => 'registration',  'action' => 'listUserRepo',)
+Nov 03 18:39:49 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Nov 03 18:39:49 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Nov 03 18:39:49 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Nov 03 18:39:49 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Nov 03 18:39:49 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (2)
+Nov 03 18:39:49 symfony [info] {registrationActions} Call "registrationActions->executeListUserRepo()"
+Nov 03 18:39:50 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO user_repo (repo_name, user_id) VALUES (?, ?) - (BuddyPress-REST, 2)
+Nov 03 18:39:50 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO user_repo (repo_name, user_id) VALUES (?, ?) - (charityhack2012, 2)
+Nov 03 18:43:10 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Nov 03 18:43:10 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Nov 03 18:43:10 symfony [info] {sfPatternRouting} Match route "list_user_repo" (/user_repos) for /user_repos with parameters array (  'module' => 'registration',  'action' => 'listUserRepo',)
+Nov 03 18:43:10 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Nov 03 18:43:10 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Nov 03 18:43:10 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Nov 03 18:43:10 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Nov 03 18:43:10 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (2)
+Nov 03 18:43:10 symfony [info] {registrationActions} Call "registrationActions->executeListUserRepo()"
+Nov 03 18:43:11 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/charityhack2012/lib/model/doctrine/GitHubRepoTable.class.php on line 24 (Missing argument 1 for GitHubRepoTable::checkRepoNameExists(), called in /var/www/charityhack2012/apps/frontend/modules/registration/actions/actions.class.php on line 95 and defined)
+Nov 03 18:43:11 symfony [notice] {sfWebDebugLogger}  Notice at /var/www/charityhack2012/lib/model/doctrine/GitHubRepoTable.class.php on line 30 (Undefined variable: repoName)
+Nov 03 18:43:11 symfony [info] {Doctrine_Connection_Statement} execute : SELECT u.id AS u__id, u.repo_name AS u__repo_name FROM user_repo u WHERE (u.repo_name = ?) - ()
+Nov 03 18:43:11 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO user_repo (repo_name, user_id) VALUES (?, ?) - (BuddyPress-REST, 2)
+Nov 03 18:43:11 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/charityhack2012/lib/model/doctrine/GitHubRepoTable.class.php on line 24 (Missing argument 1 for GitHubRepoTable::checkRepoNameExists(), called in /var/www/charityhack2012/apps/frontend/modules/registration/actions/actions.class.php on line 95 and defined)
+Nov 03 18:43:11 symfony [notice] {sfWebDebugLogger}  Notice at /var/www/charityhack2012/lib/model/doctrine/GitHubRepoTable.class.php on line 30 (Undefined variable: repoName)
+Nov 03 18:43:11 symfony [info] {Doctrine_Connection_Statement} execute : SELECT u.id AS u__id, u.repo_name AS u__repo_name FROM user_repo u WHERE (u.repo_name = ?) - ()
+Nov 03 18:43:11 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO user_repo (repo_name, user_id) VALUES (?, ?) - (charityhack2012, 2)
+Nov 03 18:43:11 symfony [info] {sfFrontWebController} Redirect to "http://charityhack.anotherwebdeveloper.com/index.php/user_repos"
+Nov 03 18:43:11 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/charityhack2012/lib/vendor/symfony/lib/response/sfWebResponse.class.php on line 336 (Cannot modify header information - headers already sent by (output started at /var/www/charityhack2012/lib/model/doctrine/GitHubRepoTable.class.php:30))
+Nov 03 18:43:11 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+Nov 03 18:43:11 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/charityhack2012/lib/vendor/symfony/lib/response/sfWebResponse.class.php on line 357 (Cannot modify header information - headers already sent by (output started at /var/www/charityhack2012/lib/model/doctrine/GitHubRepoTable.class.php:30))
+Nov 03 18:43:11 symfony [info] {sfWebResponse} Send header "Location: http://charityhack.anotherwebdeveloper.com/index.php/user_repos"
+Nov 03 18:43:11 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/charityhack2012/lib/vendor/symfony/lib/response/sfWebResponse.class.php on line 357 (Cannot modify header information - headers already sent by (output started at /var/www/charityhack2012/lib/model/doctrine/GitHubRepoTable.class.php:30))
+Nov 03 18:43:11 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Nov 03 18:43:11 symfony [info] {sfWebDebugLogger} Configuration 1.75 ms (8)
+Nov 03 18:43:11 symfony [info] {sfWebDebugLogger} Factories 14.44 ms (1)
+Nov 03 18:43:11 symfony [info] {sfWebDebugLogger} Action "registration/listUserRepo" 1045.15 ms (1)
+Nov 03 18:43:11 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.08 ms (6)
+Nov 03 18:43:11 symfony [info] {sfWebResponse} Send content (134 o)
+Nov 03 18:43:11 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Nov 03 18:43:11 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Nov 03 18:43:11 symfony [info] {sfPatternRouting} Match route "list_user_repo" (/user_repos) for /user_repos with parameters array (  'module' => 'registration',  'action' => 'listUserRepo',)
+Nov 03 18:43:11 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Nov 03 18:43:11 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Nov 03 18:43:11 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Nov 03 18:43:11 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Nov 03 18:43:11 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (2)
+Nov 03 18:43:11 symfony [info] {registrationActions} Call "registrationActions->executeListUserRepo()"
+Nov 03 18:43:12 symfony [info] {sfPHPView} Render "/var/www/charityhack2012/apps/frontend/modules/registration/templates/listUserRepoSuccess.php"
+Nov 03 18:43:12 symfony [info] {sfPHPView} Decorate content with "/var/www/charityhack2012/apps/frontend/templates/layout.php"
+Nov 03 18:43:12 symfony [info] {sfPHPView} Render "/var/www/charityhack2012/apps/frontend/templates/layout.php"
+Nov 03 18:43:12 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Nov 03 18:43:12 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Nov 03 18:43:12 symfony [info] {sfWebDebugLogger} Configuration 1.93 ms (9)
+Nov 03 18:43:12 symfony [info] {sfWebDebugLogger} Factories 9.17 ms (1)
+Nov 03 18:43:12 symfony [info] {sfWebDebugLogger} Action "registration/listUserRepo" 673.65 ms (1)
+Nov 03 18:43:12 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.03 ms (2)
+Nov 03 18:43:12 symfony [info] {sfWebDebugLogger} View "Success" for "registration/listUserRepo" 12.68 ms (1)
+Nov 03 18:43:12 symfony [info] {sfWebResponse} Send content (35629 o)
+Nov 03 18:43:51 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Nov 03 18:43:51 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Nov 03 18:43:51 symfony [info] {sfPatternRouting} Match route "list_user_repo" (/user_repos) for /user_repos with parameters array (  'module' => 'registration',  'action' => 'listUserRepo',)
+Nov 03 18:43:51 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Nov 03 18:43:51 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Nov 03 18:43:51 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Nov 03 18:43:51 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Nov 03 18:43:51 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (2)
+Nov 03 18:43:51 symfony [info] {registrationActions} Call "registrationActions->executeListUserRepo()"
+Nov 03 18:43:51 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/charityhack2012/lib/model/doctrine/GitHubRepoTable.class.php on line 24 (Missing argument 1 for GitHubRepoTable::checkRepoNameExists(), called in /var/www/charityhack2012/apps/frontend/modules/registration/actions/actions.class.php on line 95 and defined)
+Nov 03 18:43:51 symfony [notice] {sfWebDebugLogger}  Notice at /var/www/charityhack2012/lib/model/doctrine/GitHubRepoTable.class.php on line 30 (Undefined variable: repoName)
+Nov 03 18:43:51 symfony [info] {Doctrine_Connection_Statement} execute : SELECT u.id AS u__id, u.repo_name AS u__repo_name FROM user_repo u WHERE (u.repo_name = ?) - ()
+Nov 03 18:44:09 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Nov 03 18:44:09 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Nov 03 18:44:09 symfony [info] {sfPatternRouting} Match route "list_user_repo" (/user_repos) for /user_repos with parameters array (  'module' => 'registration',  'action' => 'listUserRepo',)
+Nov 03 18:44:09 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Nov 03 18:44:09 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Nov 03 18:44:09 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Nov 03 18:44:09 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Nov 03 18:44:09 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (2)
+Nov 03 18:44:09 symfony [info] {registrationActions} Call "registrationActions->executeListUserRepo()"
+Nov 03 18:44:10 symfony [info] {Doctrine_Connection_Statement} execute : SELECT u.id AS u__id, u.repo_name AS u__repo_name FROM user_repo u WHERE (u.repo_name = ?) - (BuddyPress-REST)
+Nov 03 18:44:34 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Nov 03 18:44:34 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Nov 03 18:44:34 symfony [info] {sfPatternRouting} Match route "list_user_repo" (/user_repos) for /user_repos with parameters array (  'module' => 'registration',  'action' => 'listUserRepo',)
+Nov 03 18:44:34 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Nov 03 18:44:34 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Nov 03 18:44:34 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Nov 03 18:44:34 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Nov 03 18:44:34 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (2)
+Nov 03 18:44:34 symfony [info] {registrationActions} Call "registrationActions->executeListUserRepo()"
+Nov 03 18:44:35 symfony [info] {Doctrine_Connection_Statement} execute : SELECT u.id AS u__id, u.repo_name AS u__repo_name FROM user_repo u WHERE (u.repo_name = ?) - (BuddyPress-REST)
+Nov 03 18:44:35 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO user_repo (repo_name, user_id) VALUES (?, ?) - (BuddyPress-REST, 2)
+Nov 03 18:44:35 symfony [info] {Doctrine_Connection_Statement} execute : SELECT u.id AS u__id, u.repo_name AS u__repo_name FROM user_repo u WHERE (u.repo_name = ?) - (charityhack2012)
+Nov 03 18:44:35 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO user_repo (repo_name, user_id) VALUES (?, ?) - (charityhack2012, 2)
+Nov 03 18:44:35 symfony [info] {sfFrontWebController} Redirect to "http://charityhack.anotherwebdeveloper.com/index.php/user_repos"
+Nov 03 18:44:35 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+Nov 03 18:44:35 symfony [info] {sfWebResponse} Send header "Location: http://charityhack.anotherwebdeveloper.com/index.php/user_repos"
+Nov 03 18:44:35 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Nov 03 18:44:35 symfony [info] {sfWebDebugLogger} Configuration 2.46 ms (8)
+Nov 03 18:44:35 symfony [info] {sfWebDebugLogger} Factories 10.73 ms (1)
+Nov 03 18:44:35 symfony [info] {sfWebDebugLogger} Action "registration/listUserRepo" 1148.53 ms (1)
+Nov 03 18:44:35 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.07 ms (6)
+Nov 03 18:44:35 symfony [info] {sfWebResponse} Send content (134 o)
+Nov 03 18:44:35 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Nov 03 18:44:35 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Nov 03 18:44:35 symfony [info] {sfPatternRouting} Match route "list_user_repo" (/user_repos) for /user_repos with parameters array (  'module' => 'registration',  'action' => 'listUserRepo',)
+Nov 03 18:44:35 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Nov 03 18:44:35 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Nov 03 18:44:35 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Nov 03 18:44:35 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Nov 03 18:44:35 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (2)
+Nov 03 18:44:35 symfony [info] {registrationActions} Call "registrationActions->executeListUserRepo()"
+Nov 03 18:44:37 symfony [info] {sfPHPView} Render "/var/www/charityhack2012/apps/frontend/modules/registration/templates/listUserRepoSuccess.php"
+Nov 03 18:44:37 symfony [info] {sfPHPView} Decorate content with "/var/www/charityhack2012/apps/frontend/templates/layout.php"
+Nov 03 18:44:37 symfony [info] {sfPHPView} Render "/var/www/charityhack2012/apps/frontend/templates/layout.php"
+Nov 03 18:44:37 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Nov 03 18:44:37 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Nov 03 18:44:37 symfony [info] {sfWebDebugLogger} Configuration 2.62 ms (9)
+Nov 03 18:44:37 symfony [info] {sfWebDebugLogger} Factories 9.45 ms (1)
+Nov 03 18:44:37 symfony [info] {sfWebDebugLogger} Action "registration/listUserRepo" 1154.78 ms (1)
+Nov 03 18:44:37 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.03 ms (2)
+Nov 03 18:44:37 symfony [info] {sfWebDebugLogger} View "Success" for "registration/listUserRepo" 12.80 ms (1)
+Nov 03 18:44:37 symfony [info] {sfWebResponse} Send content (35723 o)
+Nov 03 18:45:11 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Nov 03 18:45:11 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Nov 03 18:45:11 symfony [info] {sfPatternRouting} Match route "list_user_repo" (/user_repos) for /user_repos with parameters array (  'module' => 'registration',  'action' => 'listUserRepo',)
+Nov 03 18:45:11 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Nov 03 18:45:11 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Nov 03 18:45:11 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Nov 03 18:45:11 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Nov 03 18:45:11 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (2)
+Nov 03 18:45:11 symfony [info] {registrationActions} Call "registrationActions->executeListUserRepo()"
+Nov 03 18:45:11 symfony [info] {Doctrine_Connection_Statement} execute : SELECT u.id AS u__id, u.repo_name AS u__repo_name FROM user_repo u WHERE (u.repo_name = ?) - (BuddyPress-REST)
+Nov 03 18:45:11 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO user_repo (repo_name, user_id) VALUES (?, ?) - (BuddyPress-REST, 2)
+Nov 03 18:45:11 symfony [info] {Doctrine_Connection_Statement} execute : SELECT u.id AS u__id, u.repo_name AS u__repo_name FROM user_repo u WHERE (u.repo_name = ?) - (charityhack2012)
+Nov 03 18:45:11 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO user_repo (repo_name, user_id) VALUES (?, ?) - (charityhack2012, 2)
+Nov 03 18:45:11 symfony [info] {sfFrontWebController} Redirect to "http://charityhack.anotherwebdeveloper.com/index.php/list_issues"
+Nov 03 18:45:11 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+Nov 03 18:45:11 symfony [info] {sfWebResponse} Send header "Location: http://charityhack.anotherwebdeveloper.com/index.php/list_issues"
+Nov 03 18:45:11 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Nov 03 18:45:11 symfony [info] {sfWebDebugLogger} Configuration 2.19 ms (8)
+Nov 03 18:45:11 symfony [info] {sfWebDebugLogger} Factories 12.00 ms (1)
+Nov 03 18:45:11 symfony [info] {sfWebDebugLogger} Action "registration/listUserRepo" 905.20 ms (1)
+Nov 03 18:45:11 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.07 ms (6)
+Nov 03 18:45:11 symfony [info] {sfWebResponse} Send content (135 o)
+Nov 03 18:45:11 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Nov 03 18:45:11 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Nov 03 18:45:11 symfony [info] {sfPatternRouting} Match route "list_user_issues" (/list_issues) for /list_issues with parameters array (  'module' => 'registration',  'action' => 'listIssues',)
+Nov 03 18:45:11 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Nov 03 18:45:11 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Nov 03 18:45:12 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Nov 03 18:45:12 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (2)
+Nov 03 18:45:12 symfony [info] {registrationActions} Call "registrationActions->executeListIssues()"

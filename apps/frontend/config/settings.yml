@@ -22,9 +22,9 @@ test:
     no_script_name:         false
     etag:                   false
 
-  all:
-    .settings:
-      enabled_modules:      [default, sfGuardAuth]
+all:
+  .settings:
+    enabled_modules:      [default, sfGuardAuth]
 
     login_module:           sfGuardAuth
     login_action:           signin

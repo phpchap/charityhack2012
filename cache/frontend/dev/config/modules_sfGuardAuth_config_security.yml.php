@@ -6,6 +6,18 @@ $this->security = array (
   array (
     'is_secure' => true,
   ),
+  'secure' => 
+  array (
+    'is_secure' => false,
+  ),
+  'signin' => 
+  array (
+    'is_secure' => false,
+  ),
+  'signout' => 
+  array (
+    'is_secure' => false,
+  ),
   'all' => 
   array (
   ),
