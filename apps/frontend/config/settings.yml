@@ -22,8 +22,16 @@ test:
     no_script_name:         false
     etag:                   false
 
-all:
-  .settings:
+  all:
+    .settings:
+      enabled_modules:      [default, sfGuardAuth]
+
+    login_module:           sfGuardAuth
+    login_action:           signin
+
+    secure_module:          sfGuardAuth
+    secure_action:          secure
+
     # Form security secret (CSRF protection)
     csrf_secret:            401ca2f2a730a3da6990a16316267ac4bd859f57
 
