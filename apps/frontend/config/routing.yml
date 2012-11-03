@@ -12,6 +12,10 @@ list_user_issues:
   url:   /list_issues
   param: { module: registration, action: listIssues }
 
+create_just_giving_page:
+  url:   /create_just_giving_page
+  param: { module: registration, action: createJustGivingPage }
+
 sf_guard_signin:
   url:   /login
   param: { module: sfGuardAuth, action: signin }

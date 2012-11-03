@@ -31,6 +31,7 @@ GitHubIssue:
   columns:
     repo_id: { type: integer } 
     user_id: { type: integer } 
-    repo_name: { type: string(255), notnull: true } 
+    issue_number: { type: integer } 
+    donation_amount: { type: integer }
   relations:
-    GitRepo: { class: sfGuardUser, local: id, foreignAlias: sfGuardUser, type: many }        
+    GitIssue: { class: GitHubRepo, local: repo_id, foreign: id, foreignAlias: GitHubRepo, type: many }        

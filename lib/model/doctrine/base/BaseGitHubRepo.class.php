@@ -8,13 +8,16 @@
  * @property integer $user_id
  * @property string $repo_name
  * @property Doctrine_Collection $GitRepo
+ * @property GitHubIssue $GitHubRepo
  * 
- * @method integer             getUserId()    Returns the current record's "user_id" value
- * @method string              getRepoName()  Returns the current record's "repo_name" value
- * @method Doctrine_Collection getGitRepo()   Returns the current record's "GitRepo" collection
- * @method GitHubRepo          setUserId()    Sets the current record's "user_id" value
- * @method GitHubRepo          setRepoName()  Sets the current record's "repo_name" value
- * @method GitHubRepo          setGitRepo()   Sets the current record's "GitRepo" collection
+ * @method integer             getUserId()     Returns the current record's "user_id" value
+ * @method string              getRepoName()   Returns the current record's "repo_name" value
+ * @method Doctrine_Collection getGitRepo()    Returns the current record's "GitRepo" collection
+ * @method GitHubIssue         getGitHubRepo() Returns the current record's "GitHubRepo" value
+ * @method GitHubRepo          setUserId()     Sets the current record's "user_id" value
+ * @method GitHubRepo          setRepoName()   Sets the current record's "repo_name" value
+ * @method GitHubRepo          setGitRepo()    Sets the current record's "GitRepo" collection
+ * @method GitHubRepo          setGitHubRepo() Sets the current record's "GitHubRepo" value
  * 
  * @package    charitycoding
  * @subpackage model
@@ -46,5 +49,9 @@ abstract class BaseGitHubRepo extends sfDoctrineRecord
         $this->hasMany('sfGuardUser as GitRepo', array(
              'local' => 'id',
              'foreign' => 'id'));
+
+        $this->hasOne('GitHubIssue as GitHubRepo', array(
+             'local' => 'id',
+             'foreign' => 'repo_id'));
     }
 }

@@ -17,6 +17,22 @@ class GitHubRepoTable extends Doctrine_Table {
     }
 
     /**
+     * fetch all the user repos
+     * @param type $userId
+     * @return type 
+     */
+    public static function getUserRepos($userId)
+    {
+	// create the query
+	$q = Doctrine_Query::create();
+	$q->select("g.repo_name");
+	$q->from("GitHubRepo g");        
+	$q->addWhere("g.user_id = ?", $userId);        
+	// execute the query and return the resultset
+        return $q->fetchArray();                
+    }
+    
+    /**
      * check if a github username is already registered
      * @param type $githubUsername
      * @return boolean 
