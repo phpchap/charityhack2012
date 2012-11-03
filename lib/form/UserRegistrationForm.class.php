@@ -20,8 +20,11 @@ class UserRegistrationForm extends BaseUserDetailsForm {
 	$sfGuardForm->setValidator('email_address', new sfValidatorEmail(array('required' => true)));
 	
 	// remove the id field
-	unset($this->widgetSchema['id']);
-
+	unset($this->widgetSchema['id']);        
+        unset($sfGuardForm['first_name']);
+        unset($sfGuardForm['last_name']);
+        unset($sfGuardForm['username']);
+        
 	// embed the sfGuardUserForm within this form
 	$this->mergeForm($sfGuardForm);        
     }

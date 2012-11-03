@@ -24,14 +24,13 @@ class registrationActions extends sfActions {
 	if ($request->isMethod('post')) {
 
             // bind submitted data
-            $form->bind($request->getParameter($form->getName()),
-                        $request->getFiles($form->getName()));
+            $this->form->bind($request->getParameter($this->form->getName()),
+                              $request->getFiles($this->form->getName()));
 
             // validate the form
-            if ($form->isValid()) {
+            if ($this->form->isValid()) {
 
-                // get the cleansed values
-                $submittedInfo = $form->getValues();
+                die('--1');
             }            
             
         }    

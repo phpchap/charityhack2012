@@ -370,3 +370,158 @@ Nov 03 15:48:37 symfony [info] {sfWebDebugLogger} Factories 7.66 ms (1)
 Nov 03 15:48:37 symfony [info] {sfWebDebugLogger} Action "registration/index" 18.86 ms (1)
 Nov 03 15:48:37 symfony [info] {sfWebDebugLogger} View "Success" for "registration/index" 8.30 ms (1)
 Nov 03 15:48:37 symfony [info] {sfWebResponse} Send content (31038 o)
+Nov 03 15:49:23 symfony [info] {sfPatternRouting} Match route "registration" (/registration) for /registration with parameters array (  'module' => 'registration',  'action' => 'index',)
+Nov 03 15:49:23 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Nov 03 15:49:23 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Nov 03 15:49:23 symfony [info] {registrationActions} Call "registrationActions->executeIndex()"
+Nov 03 15:49:23 symfony [info] {sfPHPView} Render "/var/www/charityhack2012/apps/frontend/modules/registration/templates/indexSuccess.php"
+Nov 03 15:49:23 symfony [info] {sfPHPView} Decorate content with "/var/www/charityhack2012/apps/frontend/templates/layout.php"
+Nov 03 15:49:23 symfony [info] {sfPHPView} Render "/var/www/charityhack2012/apps/frontend/templates/layout.php"
+Nov 03 15:49:23 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Nov 03 15:49:23 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Nov 03 15:49:23 symfony [info] {sfWebDebugLogger} Configuration 2.30 ms (9)
+Nov 03 15:49:23 symfony [info] {sfWebDebugLogger} Factories 6.97 ms (1)
+Nov 03 15:49:23 symfony [info] {sfWebDebugLogger} Action "registration/index" 17.31 ms (1)
+Nov 03 15:49:23 symfony [info] {sfWebDebugLogger} View "Success" for "registration/index" 7.38 ms (1)
+Nov 03 15:49:23 symfony [info] {sfWebResponse} Send content (31037 o)
+Nov 03 15:49:24 symfony [info] {sfPatternRouting} Match route "registration" (/registration) for /registration with parameters array (  'module' => 'registration',  'action' => 'index',)
+Nov 03 15:49:24 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Nov 03 15:49:24 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Nov 03 15:49:24 symfony [info] {registrationActions} Call "registrationActions->executeIndex()"
+Nov 03 15:49:24 symfony [notice] {sfWebDebugLogger}  Notice at /var/www/charityhack2012/apps/frontend/modules/registration/actions/actions.class.php on line 27 (Undefined variable: form)
+Nov 03 15:49:38 symfony [info] {sfPatternRouting} Match route "registration" (/registration) for /registration with parameters array (  'module' => 'registration',  'action' => 'index',)
+Nov 03 15:49:38 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Nov 03 15:49:38 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Nov 03 15:49:38 symfony [info] {registrationActions} Call "registrationActions->executeIndex()"
+Nov 03 15:49:38 symfony [notice] {sfWebDebugLogger}  Notice at /var/www/charityhack2012/apps/frontend/modules/registration/actions/actions.class.php on line 27 (Undefined variable: form)
+Nov 03 15:49:40 symfony [info] {sfPatternRouting} Match route "registration" (/registration) for /registration with parameters array (  'module' => 'registration',  'action' => 'index',)
+Nov 03 15:49:40 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Nov 03 15:49:40 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Nov 03 15:49:40 symfony [info] {registrationActions} Call "registrationActions->executeIndex()"
+Nov 03 15:49:40 symfony [info] {sfPHPView} Render "/var/www/charityhack2012/apps/frontend/modules/registration/templates/indexSuccess.php"
+Nov 03 15:49:40 symfony [info] {sfPHPView} Decorate content with "/var/www/charityhack2012/apps/frontend/templates/layout.php"
+Nov 03 15:49:40 symfony [info] {sfPHPView} Render "/var/www/charityhack2012/apps/frontend/templates/layout.php"
+Nov 03 15:49:40 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Nov 03 15:49:40 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Nov 03 15:49:40 symfony [info] {sfWebDebugLogger} Configuration 1.82 ms (9)
+Nov 03 15:49:40 symfony [info] {sfWebDebugLogger} Factories 6.70 ms (1)
+Nov 03 15:49:40 symfony [info] {sfWebDebugLogger} Action "registration/index" 18.30 ms (1)
+Nov 03 15:49:40 symfony [info] {sfWebDebugLogger} View "Success" for "registration/index" 7.10 ms (1)
+Nov 03 15:49:40 symfony [info] {sfWebResponse} Send content (30950 o)
+Nov 03 15:49:42 symfony [info] {sfPatternRouting} Match route "registration" (/registration) for /registration with parameters array (  'module' => 'registration',  'action' => 'index',)
+Nov 03 15:49:42 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Nov 03 15:49:42 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Nov 03 15:49:42 symfony [info] {registrationActions} Call "registrationActions->executeIndex()"
+Nov 03 15:49:42 symfony [notice] {sfWebDebugLogger}  Notice at /var/www/charityhack2012/apps/frontend/modules/registration/actions/actions.class.php on line 27 (Undefined variable: form)
+Nov 03 15:49:57 symfony [info] {sfPatternRouting} Match route "registration" (/registration) for /registration with parameters array (  'module' => 'registration',  'action' => 'index',)
+Nov 03 15:49:57 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Nov 03 15:49:57 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Nov 03 15:49:57 symfony [info] {registrationActions} Call "registrationActions->executeIndex()"
+Nov 03 15:49:57 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Nov 03 15:49:57 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.email_address = ?) - ()
+Nov 03 15:49:57 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.username = ?) - ()
+Nov 03 15:49:57 symfony [info] {sfPHPView} Render "/var/www/charityhack2012/apps/frontend/modules/registration/templates/indexSuccess.php"
+Nov 03 15:49:57 symfony [info] {sfPHPView} Decorate content with "/var/www/charityhack2012/apps/frontend/templates/layout.php"
+Nov 03 15:49:57 symfony [info] {sfPHPView} Render "/var/www/charityhack2012/apps/frontend/templates/layout.php"
+Nov 03 15:49:57 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Nov 03 15:49:57 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Nov 03 15:49:57 symfony [info] {sfWebDebugLogger} Configuration 1.76 ms (9)
+Nov 03 15:49:57 symfony [info] {sfWebDebugLogger} Factories 7.32 ms (1)
+Nov 03 15:49:57 symfony [info] {sfWebDebugLogger} Action "registration/index" 51.22 ms (1)
+Nov 03 15:49:57 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.03 ms (3)
+Nov 03 15:49:57 symfony [info] {sfWebDebugLogger} View "Success" for "registration/index" 11.42 ms (1)
+Nov 03 15:49:57 symfony [info] {sfWebResponse} Send content (39106 o)
+Nov 03 15:50:50 symfony [info] {sfPatternRouting} Match route "registration" (/registration) for /registration with parameters array (  'module' => 'registration',  'action' => 'index',)
+Nov 03 15:50:50 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Nov 03 15:50:50 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Nov 03 15:50:50 symfony [info] {registrationActions} Call "registrationActions->executeIndex()"
+Nov 03 15:50:50 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Nov 03 15:50:50 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.email_address = ?) - ()
+Nov 03 15:50:50 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.username = ?) - ()
+Nov 03 15:50:50 symfony [info] {sfPHPView} Render "/var/www/charityhack2012/apps/frontend/modules/registration/templates/indexSuccess.php"
+Nov 03 15:50:50 symfony [info] {sfPHPView} Decorate content with "/var/www/charityhack2012/apps/frontend/templates/layout.php"
+Nov 03 15:50:50 symfony [info] {sfPHPView} Render "/var/www/charityhack2012/apps/frontend/templates/layout.php"
+Nov 03 15:50:50 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Nov 03 15:50:50 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Nov 03 15:50:50 symfony [info] {sfWebDebugLogger} Configuration 2.40 ms (9)
+Nov 03 15:50:50 symfony [info] {sfWebDebugLogger} Factories 8.61 ms (1)
+Nov 03 15:50:50 symfony [info] {sfWebDebugLogger} Action "registration/index" 52.50 ms (1)
+Nov 03 15:50:50 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.04 ms (3)
+Nov 03 15:50:50 symfony [info] {sfWebDebugLogger} View "Success" for "registration/index" 7.90 ms (1)
+Nov 03 15:50:50 symfony [info] {sfWebResponse} Send content (39105 o)
+Nov 03 15:50:52 symfony [info] {sfPatternRouting} Match route "registration" (/registration) for /registration with parameters array (  'module' => 'registration',  'action' => 'index',)
+Nov 03 15:50:52 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Nov 03 15:50:52 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Nov 03 15:50:52 symfony [info] {registrationActions} Call "registrationActions->executeIndex()"
+Nov 03 15:50:52 symfony [info] {sfPHPView} Render "/var/www/charityhack2012/apps/frontend/modules/registration/templates/indexSuccess.php"
+Nov 03 15:50:52 symfony [info] {sfPHPView} Decorate content with "/var/www/charityhack2012/apps/frontend/templates/layout.php"
+Nov 03 15:50:52 symfony [info] {sfPHPView} Render "/var/www/charityhack2012/apps/frontend/templates/layout.php"
+Nov 03 15:50:52 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Nov 03 15:50:52 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Nov 03 15:50:52 symfony [info] {sfWebDebugLogger} Configuration 2.19 ms (9)
+Nov 03 15:50:52 symfony [info] {sfWebDebugLogger} Factories 8.33 ms (1)
+Nov 03 15:50:52 symfony [info] {sfWebDebugLogger} Action "registration/index" 16.83 ms (1)
+Nov 03 15:50:52 symfony [info] {sfWebDebugLogger} View "Success" for "registration/index" 7.46 ms (1)
+Nov 03 15:50:52 symfony [info] {sfWebResponse} Send content (30950 o)
+Nov 03 15:50:53 symfony [info] {sfPatternRouting} Match route "registration" (/registration) for /registration with parameters array (  'module' => 'registration',  'action' => 'index',)
+Nov 03 15:50:53 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Nov 03 15:50:53 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Nov 03 15:50:53 symfony [info] {registrationActions} Call "registrationActions->executeIndex()"
+Nov 03 15:50:54 symfony [info] {sfPHPView} Render "/var/www/charityhack2012/apps/frontend/modules/registration/templates/indexSuccess.php"
+Nov 03 15:50:54 symfony [info] {sfPHPView} Decorate content with "/var/www/charityhack2012/apps/frontend/templates/layout.php"
+Nov 03 15:50:54 symfony [info] {sfPHPView} Render "/var/www/charityhack2012/apps/frontend/templates/layout.php"
+Nov 03 15:50:54 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Nov 03 15:50:54 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Nov 03 15:50:54 symfony [info] {sfWebDebugLogger} Configuration 2.11 ms (9)
+Nov 03 15:50:54 symfony [info] {sfWebDebugLogger} Factories 7.55 ms (1)
+Nov 03 15:50:54 symfony [info] {sfWebDebugLogger} Action "registration/index" 27.69 ms (1)
+Nov 03 15:50:54 symfony [info] {sfWebDebugLogger} View "Success" for "registration/index" 9.00 ms (1)
+Nov 03 15:50:54 symfony [info] {sfWebResponse} Send content (30950 o)
+Nov 03 15:51:11 symfony [info] {sfPatternRouting} Match route "registration" (/registration) for /registration with parameters array (  'module' => 'registration',  'action' => 'index',)
+Nov 03 15:51:11 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Nov 03 15:51:11 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Nov 03 15:51:11 symfony [info] {registrationActions} Call "registrationActions->executeIndex()"
+Nov 03 15:51:11 symfony [info] {sfPHPView} Render "/var/www/charityhack2012/apps/frontend/modules/registration/templates/indexSuccess.php"
+Nov 03 15:51:11 symfony [info] {sfPHPView} Decorate content with "/var/www/charityhack2012/apps/frontend/templates/layout.php"
+Nov 03 15:51:11 symfony [info] {sfPHPView} Render "/var/www/charityhack2012/apps/frontend/templates/layout.php"
+Nov 03 15:51:11 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Nov 03 15:51:11 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Nov 03 15:51:11 symfony [info] {sfWebDebugLogger} Configuration 1.75 ms (9)
+Nov 03 15:51:11 symfony [info] {sfWebDebugLogger} Factories 7.94 ms (1)
+Nov 03 15:51:11 symfony [info] {sfWebDebugLogger} Action "registration/index" 17.95 ms (1)
+Nov 03 15:51:11 symfony [info] {sfWebDebugLogger} View "Success" for "registration/index" 6.93 ms (1)
+Nov 03 15:51:11 symfony [info] {sfWebResponse} Send content (30260 o)
+Nov 03 15:51:14 symfony [info] {sfPatternRouting} Match route "registration" (/registration) for /registration with parameters array (  'module' => 'registration',  'action' => 'index',)
+Nov 03 15:51:14 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Nov 03 15:51:14 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Nov 03 15:51:14 symfony [info] {registrationActions} Call "registrationActions->executeIndex()"
+Nov 03 15:51:14 symfony [info] {sfPHPView} Render "/var/www/charityhack2012/apps/frontend/modules/registration/templates/indexSuccess.php"
+Nov 03 15:51:14 symfony [info] {sfPHPView} Decorate content with "/var/www/charityhack2012/apps/frontend/templates/layout.php"
+Nov 03 15:51:14 symfony [info] {sfPHPView} Render "/var/www/charityhack2012/apps/frontend/templates/layout.php"
+Nov 03 15:51:14 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Nov 03 15:51:14 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Nov 03 15:51:14 symfony [info] {sfWebDebugLogger} Configuration 1.96 ms (9)
+Nov 03 15:51:14 symfony [info] {sfWebDebugLogger} Factories 6.86 ms (1)
+Nov 03 15:51:14 symfony [info] {sfWebDebugLogger} Action "registration/index" 17.13 ms (1)
+Nov 03 15:51:14 symfony [info] {sfWebDebugLogger} View "Success" for "registration/index" 6.11 ms (1)
+Nov 03 15:51:14 symfony [info] {sfWebResponse} Send content (30205 o)
+Nov 03 15:51:28 symfony [info] {sfPatternRouting} Match route "registration" (/registration) for /registration with parameters array (  'module' => 'registration',  'action' => 'index',)
+Nov 03 15:51:28 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Nov 03 15:51:28 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Nov 03 15:51:28 symfony [info] {registrationActions} Call "registrationActions->executeIndex()"
+Nov 03 15:51:28 symfony [info] {sfPHPView} Render "/var/www/charityhack2012/apps/frontend/modules/registration/templates/indexSuccess.php"
+Nov 03 15:51:28 symfony [info] {sfPHPView} Decorate content with "/var/www/charityhack2012/apps/frontend/templates/layout.php"
+Nov 03 15:51:28 symfony [info] {sfPHPView} Render "/var/www/charityhack2012/apps/frontend/templates/layout.php"
+Nov 03 15:51:28 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Nov 03 15:51:28 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Nov 03 15:51:28 symfony [info] {sfWebDebugLogger} Configuration 2.19 ms (9)
+Nov 03 15:51:28 symfony [info] {sfWebDebugLogger} Factories 7.75 ms (1)
+Nov 03 15:51:28 symfony [info] {sfWebDebugLogger} Action "registration/index" 18.03 ms (1)
+Nov 03 15:51:28 symfony [info] {sfWebDebugLogger} View "Success" for "registration/index" 6.48 ms (1)
+Nov 03 15:51:29 symfony [info] {sfWebResponse} Send content (29839 o)
+Nov 03 15:51:47 symfony [info] {sfPatternRouting} Match route "registration" (/registration) for /registration with parameters array (  'module' => 'registration',  'action' => 'index',)
+Nov 03 15:51:47 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Nov 03 15:51:47 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Nov 03 15:51:47 symfony [info] {registrationActions} Call "registrationActions->executeIndex()"
+Nov 03 15:51:47 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Nov 03 15:51:47 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.email_address = ?) - (phpchap@gmail.com)
